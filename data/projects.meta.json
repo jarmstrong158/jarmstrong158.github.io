@@ -1,0 +1,33 @@
+{
+  "_comment": "Hand-curated layer. build_data.py merges live GitHub dates/stars/language into this. Edit freely; only repos listed here appear on the arc.",
+  "threads": {
+    "mcp":   { "label": "MCP & agent infrastructure", "color": "#0b7285" },
+    "rl":    { "label": "Reinforcement learning / ML", "color": "#6741d9" },
+    "tools": { "label": "Automation & tools",          "color": "#e8590c" },
+    "games": { "label": "Games",                       "color": "#2b8a3e" }
+  },
+  "projects": {
+    "git-onboard":              { "thread": "tools", "featured": true,  "blurb": "Where it started: a CLI that walks complete beginners through Git and GitHub, explaining every command in plain English.", "metric": "the starting line" },
+    "shipexec-metrics-tracker": { "thread": "tools", "blurb": "Automated daily warehouse shipping reports (Selenium + pandas + Excel).", "metric": "~25 labor-hrs/week saved · in production" },
+    "Balatron":                 { "thread": "rl",    "featured": true,  "blurb": "Autonomous Balatro agent: PPO policy + forward-simulating planner + heuristics, measured on a held-out fixed-seed harness.", "metric": "confirmed white-stake wins" },
+    "Dolly":                    { "thread": "rl",    "blurb": "The earliest warehouse RL simulation — where the Dolly → Jack → Clark line began.", "metric": "the seed of the RL thread" },
+    "Jack":                     { "thread": "rl",    "featured": true,  "blurb": "PPO + LSTM agent with temporal memory for warehouse scheduling; validated single-facility predecessor to Clark.", "metric": "98.2% order completion (sim)" },
+    "Clark":                    { "thread": "rl",    "featured": true,  "blurb": "Foundation RL model for warehouse workforce scheduling — variable-shape transformer + LSTM (~18M params), 3-stage curriculum.", "metric": "~93% completion across 5–50-worker facilities (sim)" },
+    "clark-mcp":                { "thread": "rl",    "blurb": "Fully-local natural-language interface to the Clark agent — MCP server + offline hermes3 client.", "metric": "no cloud, no API cost" },
+    "ai-profile-builder":       { "thread": "tools", "blurb": "Full-stack team AI-profiling platform: 14 behavioral spectrums, 9 archetypes, React 19 + Supabase.", "metric": "119-test suite" },
+    "skillmatch-mcp":           { "thread": "mcp",   "blurb": "Job-fit analysis MCP: compares your resume + GitHub portfolio against a job description.", "metric": "for proving skills through work" },
+    "context-keeper":           { "thread": "mcp",   "featured": true,  "blurb": "Durable, rationale-first project memory: decisions, constraints, and pipelines across sessions, in human-editable JSON.", "metric": "~92% context reduction · Hit@5 13/15" },
+    "llm-evals":                { "thread": "mcp",   "blurb": "Eval framework for LLM tools and agents — swappable executors and scorers, regression detection built in.", "metric": "MCP / CLI / HTTP / Python executors" },
+    "rag-pipeline":             { "thread": "mcp",   "blurb": "Fully-local document Q&A (llama.cpp + Llama 3.2 + nomic-embed), FastAPI front door.", "metric": "no cloud, no external vector DB" },
+    "skein":                    { "thread": "mcp",   "blurb": "Local-first observability for A2A multi-agent message flows — deterministic failure-cascade detection.", "metric": "71/71 tests, ruff + mypy clean" },
+    "waveform-MCP":             { "thread": "mcp",   "blurb": "Gives Claude full control of Tracktion Waveform — compose, mix, master, render.", "metric": "150+ tools — largest surface I've built" },
+    "Conductor":                { "thread": "mcp",   "blurb": "Local automation platform with a web dashboard — Flask + Redis workers + APScheduler.", "metric": "shipped Windows product, 22 MCP tools" },
+    "agentsync":                { "thread": "mcp",   "featured": true,  "blurb": "Server-less multi-agent coordination: claims on a git branch, git push as compare-and-swap.", "metric": "1,000 races — 0 lost, 0 double-granted" },
+    "cambium":                  { "thread": "mcp",   "featured": true,  "blurb": "The knowledge lifecycle: distill finished work into memory, recall it anywhere, promote local → team → org by earned trust.", "metric": "bridges agentsync + context-keeper" },
+    "context-keeper-remote":    { "thread": "mcp",   "blurb": "Cloudflare Worker transport for context-keeper — D1-backed, Streamable HTTP.", "metric": "phone as a full peer" },
+    "agentsync-remote":         { "thread": "mcp",   "blurb": "Cloudflare Worker transport for agentsync — GitHub-backed, compare-and-swap over HTTP.", "metric": "phone as a full peer" },
+    "Xylem":                    { "thread": "mcp",   "featured": true,  "blurb": "The stack: memory + coordination + knowledge lifecycle for AI agents, with a one-install habit layer. Local-first, remote-capable.", "metric": "5 servers live on the official MCP registry" },
+    "vanguard-web":             { "thread": "games", "blurb": "TypeScript + Phaser 3 JRPG with a connected walkable world, sim-tuned combat, and pixel-art sprites.", "metric": "" },
+    "shardfall":                { "thread": "games", "blurb": "A tiny idle game — HTML5 canvas + Vite, all art & audio generated in code.", "metric": "" }
+  }
+}

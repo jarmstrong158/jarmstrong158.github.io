@@ -1,0 +1,323 @@
+{
+  "generated": "2026-07-12",
+  "threads": {
+    "mcp": {
+      "label": "MCP & agent infrastructure",
+      "color": "#0b7285"
+    },
+    "rl": {
+      "label": "Reinforcement learning / ML",
+      "color": "#6741d9"
+    },
+    "tools": {
+      "label": "Automation & tools",
+      "color": "#e8590c"
+    },
+    "games": {
+      "label": "Games",
+      "color": "#2b8a3e"
+    }
+  },
+  "projects": [
+    {
+      "name": "git-onboard",
+      "thread": "tools",
+      "blurb": "Where it started: a CLI that walks complete beginners through Git and GitHub, explaining every command in plain English.",
+      "metric": "the starting line",
+      "featured": true,
+      "date": "2026-02-25",
+      "updated": "2026-07-12",
+      "language": "Python",
+      "stars": 0,
+      "url": "https://github.com/jarmstrong158/git-onboard"
+    },
+    {
+      "name": "shipexec-metrics-tracker",
+      "thread": "tools",
+      "blurb": "Automated daily warehouse shipping reports (Selenium + pandas + Excel).",
+      "metric": "~25 labor-hrs/week saved \u00b7 in production",
+      "featured": false,
+      "date": "2026-02-26",
+      "updated": "2026-07-12",
+      "language": "Python",
+      "stars": 0,
+      "url": "https://github.com/jarmstrong158/shipexec-metrics-tracker"
+    },
+    {
+      "name": "ai-profile-builder",
+      "thread": "tools",
+      "blurb": "Full-stack team AI-profiling platform: 14 behavioral spectrums, 9 archetypes, React 19 + Supabase.",
+      "metric": "119-test suite",
+      "featured": false,
+      "date": "2026-03-07",
+      "updated": "2026-05-10",
+      "language": "JavaScript",
+      "stars": 0,
+      "url": "https://github.com/jarmstrong158/ai-profile-builder"
+    },
+    {
+      "name": "Balatron",
+      "thread": "rl",
+      "blurb": "Autonomous Balatro agent: PPO policy + forward-simulating planner + heuristics, measured on a held-out fixed-seed harness.",
+      "metric": "confirmed white-stake wins",
+      "featured": true,
+      "date": "2026-03-21",
+      "updated": "2026-07-12",
+      "language": "Python",
+      "stars": 2,
+      "url": "https://github.com/jarmstrong158/Balatron"
+    },
+    {
+      "name": "Dolly",
+      "thread": "rl",
+      "blurb": "The earliest warehouse RL simulation \u2014 where the Dolly \u2192 Jack \u2192 Clark line began.",
+      "metric": "the seed of the RL thread",
+      "featured": false,
+      "date": "2026-03-26",
+      "updated": "2026-04-12",
+      "language": "Python",
+      "stars": 0,
+      "url": "https://github.com/jarmstrong158/Dolly"
+    },
+    {
+      "name": "Jack",
+      "thread": "rl",
+      "blurb": "PPO + LSTM agent with temporal memory for warehouse scheduling; validated single-facility predecessor to Clark.",
+      "metric": "98.2% order completion (sim)",
+      "featured": true,
+      "date": "2026-03-27",
+      "updated": "2026-07-12",
+      "language": "Python",
+      "stars": 0,
+      "url": "https://github.com/jarmstrong158/Jack"
+    },
+    {
+      "name": "Clark",
+      "thread": "rl",
+      "blurb": "Foundation RL model for warehouse workforce scheduling \u2014 variable-shape transformer + LSTM (~18M params), 3-stage curriculum.",
+      "metric": "~93% completion across 5\u201350-worker facilities (sim)",
+      "featured": true,
+      "date": "2026-03-28",
+      "updated": "2026-07-12",
+      "language": "Python",
+      "stars": 2,
+      "url": "https://github.com/jarmstrong158/Clark"
+    },
+    {
+      "name": "Conductor",
+      "thread": "mcp",
+      "blurb": "Local automation platform with a web dashboard \u2014 Flask + Redis workers + APScheduler.",
+      "metric": "shipped Windows product, 22 MCP tools",
+      "featured": false,
+      "date": "2026-03-31",
+      "updated": "2026-07-10",
+      "language": "Python",
+      "stars": 0,
+      "url": "https://github.com/jarmstrong158/Conductor"
+    },
+    {
+      "name": "skillmatch-mcp",
+      "thread": "mcp",
+      "blurb": "Job-fit analysis MCP: compares your resume + GitHub portfolio against a job description.",
+      "metric": "for proving skills through work",
+      "featured": false,
+      "date": "2026-04-04",
+      "updated": "2026-07-10",
+      "language": "Python",
+      "stars": 2,
+      "url": "https://github.com/jarmstrong158/skillmatch-mcp"
+    },
+    {
+      "name": "context-keeper",
+      "thread": "mcp",
+      "blurb": "Durable, rationale-first project memory: decisions, constraints, and pipelines across sessions, in human-editable JSON.",
+      "metric": "~92% context reduction \u00b7 Hit@5 13/15",
+      "featured": true,
+      "date": "2026-04-10",
+      "updated": "2026-07-12",
+      "language": "Python",
+      "stars": 1,
+      "url": "https://github.com/jarmstrong158/context-keeper"
+    },
+    {
+      "name": "llm-evals",
+      "thread": "mcp",
+      "blurb": "Eval framework for LLM tools and agents \u2014 swappable executors and scorers, regression detection built in.",
+      "metric": "MCP / CLI / HTTP / Python executors",
+      "featured": false,
+      "date": "2026-04-12",
+      "updated": "2026-07-12",
+      "language": "Python",
+      "stars": 0,
+      "url": "https://github.com/jarmstrong158/llm-evals"
+    },
+    {
+      "name": "rag-pipeline",
+      "thread": "mcp",
+      "blurb": "Fully-local document Q&A (llama.cpp + Llama 3.2 + nomic-embed), FastAPI front door.",
+      "metric": "no cloud, no external vector DB",
+      "featured": false,
+      "date": "2026-04-12",
+      "updated": "2026-07-12",
+      "language": "Python",
+      "stars": 0,
+      "url": "https://github.com/jarmstrong158/rag-pipeline"
+    },
+    {
+      "name": "skein",
+      "thread": "mcp",
+      "blurb": "Local-first observability for A2A multi-agent message flows \u2014 deterministic failure-cascade detection.",
+      "metric": "71/71 tests, ruff + mypy clean",
+      "featured": false,
+      "date": "2026-04-19",
+      "updated": "2026-07-12",
+      "language": "Python",
+      "stars": 0,
+      "url": "https://github.com/jarmstrong158/skein"
+    },
+    {
+      "name": "waveform-MCP",
+      "thread": "mcp",
+      "blurb": "Gives Claude full control of Tracktion Waveform \u2014 compose, mix, master, render.",
+      "metric": "150+ tools \u2014 largest surface I've built",
+      "featured": false,
+      "date": "2026-05-01",
+      "updated": "2026-05-10",
+      "language": "Python",
+      "stars": 2,
+      "url": "https://github.com/jarmstrong158/waveform-MCP"
+    },
+    {
+      "name": "vanguard-web",
+      "thread": "games",
+      "blurb": "TypeScript + Phaser 3 JRPG with a connected walkable world, sim-tuned combat, and pixel-art sprites.",
+      "metric": "",
+      "featured": false,
+      "date": "2026-06-01",
+      "updated": "2026-07-12",
+      "language": "TypeScript",
+      "stars": 0,
+      "url": "https://github.com/jarmstrong158/vanguard-web"
+    },
+    {
+      "name": "shardfall",
+      "thread": "games",
+      "blurb": "A tiny idle game \u2014 HTML5 canvas + Vite, all art & audio generated in code.",
+      "metric": "",
+      "featured": false,
+      "date": "2026-06-03",
+      "updated": "2026-07-12",
+      "language": "JavaScript",
+      "stars": 0,
+      "url": "https://github.com/jarmstrong158/shardfall"
+    },
+    {
+      "name": "agentsync",
+      "thread": "mcp",
+      "blurb": "Server-less multi-agent coordination: claims on a git branch, git push as compare-and-swap.",
+      "metric": "1,000 races \u2014 0 lost, 0 double-granted",
+      "featured": true,
+      "date": "2026-06-14",
+      "updated": "2026-07-12",
+      "language": "Python",
+      "stars": 0,
+      "url": "https://github.com/jarmstrong158/agentsync"
+    },
+    {
+      "name": "cambium",
+      "thread": "mcp",
+      "blurb": "The knowledge lifecycle: distill finished work into memory, recall it anywhere, promote local \u2192 team \u2192 org by earned trust.",
+      "metric": "bridges agentsync + context-keeper",
+      "featured": true,
+      "date": "2026-07-03",
+      "updated": "2026-07-12",
+      "language": "Python",
+      "stars": 0,
+      "url": "https://github.com/jarmstrong158/cambium"
+    },
+    {
+      "name": "context-keeper-remote",
+      "thread": "mcp",
+      "blurb": "Cloudflare Worker transport for context-keeper \u2014 D1-backed, Streamable HTTP.",
+      "metric": "phone as a full peer",
+      "featured": false,
+      "date": "2026-07-08",
+      "updated": "2026-07-12",
+      "language": "TypeScript",
+      "stars": 0,
+      "url": "https://github.com/jarmstrong158/context-keeper-remote"
+    },
+    {
+      "name": "agentsync-remote",
+      "thread": "mcp",
+      "blurb": "Cloudflare Worker transport for agentsync \u2014 GitHub-backed, compare-and-swap over HTTP.",
+      "metric": "phone as a full peer",
+      "featured": false,
+      "date": "2026-07-08",
+      "updated": "2026-07-12",
+      "language": "TypeScript",
+      "stars": 0,
+      "url": "https://github.com/jarmstrong158/agentsync-remote"
+    },
+    {
+      "name": "Xylem",
+      "thread": "mcp",
+      "blurb": "The stack: memory + coordination + knowledge lifecycle for AI agents, with a one-install habit layer. Local-first, remote-capable.",
+      "metric": "5 servers live on the official MCP registry",
+      "featured": true,
+      "date": "2026-07-08",
+      "updated": "2026-07-12",
+      "language": "Python",
+      "stars": 0,
+      "url": "https://github.com/jarmstrong158/Xylem"
+    }
+  ],
+  "cadence": {
+    "unit": "GitHub contributions",
+    "months": [
+      {
+        "m": "2026-02",
+        "n": 16
+      },
+      {
+        "m": "2026-03",
+        "n": 123
+      },
+      {
+        "m": "2026-04",
+        "n": 128
+      },
+      {
+        "m": "2026-05",
+        "n": 222
+      },
+      {
+        "m": "2026-06",
+        "n": 246
+      },
+      {
+        "m": "2026-07",
+        "n": 199
+      }
+    ],
+    "total_year": 935
+  },
+  "stats": [
+    {
+      "label": "public repositories",
+      "value": 27
+    },
+    {
+      "label": "contributions (last year)",
+      "value": 935
+    },
+    {
+      "label": "months, first repo to production stack",
+      "value": 6
+    },
+    {
+      "label": "MCP servers on the official registry",
+      "value": 7
+    }
+  ]
+}
