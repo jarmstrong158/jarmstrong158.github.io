@@ -52,15 +52,21 @@ def repos():
     return out
 
 
-def contributions_by_month():
+def contributions():
     q = ('{ user(login:"%s"){ contributionsCollection{ contributionCalendar{'
          ' totalContributions weeks{ contributionDays{ date contributionCount }}}}}}' % USER)
     cal = _graphql(q)["data"]["user"]["contributionsCollection"]["contributionCalendar"]
     m = collections.OrderedDict()
+    weeks, maxc, start = [], 0, None
     for w in cal["weeks"]:
+        col = []
         for d in w["contributionDays"]:
-            key = d["date"][:7]
-            m[key] = m.get(key, 0) + d["contributionCount"]
+            if start is None:
+                start = d["date"]
+            m[d["date"][:7]] = m.get(d["date"][:7], 0) + d["contributionCount"]
+            col.append(d["contributionCount"])
+            maxc = max(maxc, d["contributionCount"])
+        weeks.append(col)
     active = [(k, v) for k, v in m.items()]
     # start at the first month that BEGINS sustained activity (this month and the
     # next both non-zero) so a lone early outlier + dormant gap isn't shown.
@@ -70,7 +76,8 @@ def contributions_by_month():
             first = i
             break
     months = [{"m": k, "n": v} for k, v in active[first:]]
-    return months, cal["totalContributions"]
+    heatmap = {"start": start, "max": maxc, "weeks": weeks}
+    return months, cal["totalContributions"], heatmap
 
 
 def registry_count():
@@ -110,7 +117,7 @@ def main():
         })
     projects.sort(key=lambda p: p["date"])
 
-    months, total_year = contributions_by_month()
+    months, total_year, heatmap = contributions()
     first_repo = min((r["created_at"][:10] for r in live.values()), default=None)
     span_months = None
     if first_repo:
@@ -133,6 +140,7 @@ def main():
         "projects": projects,
         "cadence": {"unit": "GitHub contributions", "months": months,
                     "total_year": total_year},
+        "heatmap": heatmap,
         "stats": stats,
     }
     (ROOT / "data.json").write_text(json.dumps(data, indent=2) + "\n", encoding="utf-8")

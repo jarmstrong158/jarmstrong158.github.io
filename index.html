@@ -137,6 +137,29 @@
   .contact h3{font-size:clamp(20px,3vw,26px);margin:0 0 8px}
   .contact p{color:var(--muted);max-width:60ch;margin:0 auto 18px}
 
+  /* verified proof strip */
+  .proof{display:flex;flex-wrap:wrap;gap:9px;margin:22px 0 0}
+  .proof a{display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:600;color:var(--fg);
+    background:var(--card);border:1px solid var(--line);border-radius:999px;padding:6px 13px}
+  .proof a:hover{border-color:var(--accent);text-decoration:none}
+  .proof .ok{color:var(--ok);font-weight:800}
+  /* capability tags on the timeline */
+  .captags{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+  .ctag{font-size:12px;border-radius:6px;padding:2px 9px;border:1px solid transparent;white-space:nowrap}
+  .ctag.mcp{color:var(--accent);background:color-mix(in srgb,var(--accent) 12%,transparent);border-color:color-mix(in srgb,var(--accent) 30%,transparent)}
+  .ctag.rl{color:var(--rl);background:color-mix(in srgb,var(--rl) 15%,transparent);border-color:color-mix(in srgb,var(--rl) 33%,transparent)}
+  .ctag.ops{color:var(--ops);background:color-mix(in srgb,var(--ops) 15%,transparent);border-color:color-mix(in srgb,var(--ops) 33%,transparent)}
+  .mile li::before{background:var(--dc,var(--accent))}
+  .mile .ev .em{color:var(--dc,var(--accent));font-weight:700}
+  /* heatmap */
+  .heatwrap{overflow-x:auto;padding-bottom:4px;margin-top:6px}
+  .heat{display:block}
+  .heatlegend{display:flex;align-items:center;gap:6px;justify-content:flex-end;color:var(--muted);font-size:12px;margin-top:8px}
+  .heatlegend i{width:11px;height:11px;border-radius:2px;display:inline-block}
+  .datacol{margin-top:30px}
+  .datacol h4{font-size:14px;margin:0 0 2px;font-weight:650}
+  .datacol .sm{color:var(--muted);font-size:13px;margin:0 0 8px}
+
   footer{margin:52px 0 44px;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);font-size:13.5px;display:flex;flex-wrap:wrap;gap:6px;justify-content:space-between}
 </style>
 </head>
@@ -156,6 +179,13 @@
     </div>
 
     <div class="stats" id="stats"></div>
+
+    <div class="proof">
+      <a href="https://pypi.org/user/jarmstrong158/"><span class="ok">✓</span> Published on PyPI</a>
+      <a href="https://registry.modelcontextprotocol.io/v0.1/servers?search=io.github.jarmstrong158"><span class="ok">✓</span> On the official MCP registry</a>
+      <a href="https://github.com/jarmstrong158/shipexec-metrics-tracker"><span class="ok">✓</span> Running in production</a>
+      <a href="https://github.com/jarmstrong158/agentsync/actions"><span class="ok">✓</span> CI green</a>
+    </div>
   </header>
 
   <section class="about">
@@ -193,7 +223,7 @@
   </section>
 
   <section>
-    <h2>What I build · 02</h2>
+    <h2 style="color:var(--rl)">What I build · 02</h2>
     <div class="h2sub">Reinforcement learning for operations</div>
     <p class="note">I run a warehouse, so I built RL agents that schedule a warehouse workforce — then generalized them. Numbers below are from held-out simulation, labeled as such.</p>
     <div class="grid">
@@ -225,7 +255,7 @@
   </section>
 
   <section>
-    <h2>What I build · 03</h2>
+    <h2 style="color:var(--ops)">What I build · 03</h2>
     <div class="h2sub">Automation that saves real hours</div>
     <p class="note">The fastest way to prove software matters is to automate your own job. These run in production at my warehouse.</p>
     <div class="grid">
@@ -259,21 +289,30 @@
   </section>
 
   <section>
-    <h2>The trajectory</h2>
-    <div class="h2sub">Six months, first repo to production stack.</div>
-    <p class="note">Not a bootcamp — a job, a phone, and every spare hour. The cadence is still bending up (live from GitHub).</p>
-    <div class="traj">
-      <ul class="mile">
-        <li><div class="dt">Feb 2026</div><div class="ev">Day one — wrote <b>git-onboard</b>, a CLI to teach myself Git &amp; GitHub.</div></li>
-        <li><div class="dt">Mar 2026</div><div class="ev">First RL agents: <b>Dolly → Jack</b> (98.2% order completion in sim).</div></li>
-        <li><div class="dt">Apr 2026</div><div class="ev">First MCP server: <b>context-keeper</b> — rationale-first agent memory.</div></li>
-        <li><div class="dt">May–Jun 2026</div><div class="ev"><b>Clark</b> (foundation RL) + <b>agentsync</b> (server-less coordination).</div></li>
-        <li><div class="dt">Jul 2026</div><div class="ev"><b>Xylem</b> shipped — a stack of servers live on the official MCP registry.</div></li>
-      </ul>
-      <div>
-        <svg class="chart" id="cadence" viewBox="0 0 560 210" preserveAspectRatio="none" aria-label="Monthly GitHub contributions"></svg>
-        <p class="cap" id="cadenceCap">Monthly GitHub contributions.</p>
-      </div>
+    <h2>Growth &amp; depth over time</h2>
+    <div class="h2sub">Zero to distributed systems and foundation models in six months.</div>
+    <p class="note">Not a bootcamp — a full-time job, a phone, and every spare hour. Each month I took on a genuinely harder domain. Tags are color-coded by thread.</p>
+    <ul class="mile">
+      <li style="--dc:var(--ops)"><div class="dt">Feb 2026 · the start</div><div class="ev">Wrote <b>git-onboard</b> — a CLI to teach <span class="em">myself Git</span>.</div><div class="captags"><span class="ctag ops">Python</span><span class="ctag ops">CLI design</span><span class="ctag ops">Git internals</span></div></li>
+      <li style="--dc:var(--rl)"><div class="dt">Mar 2026</div><div class="ev"><span class="em">Deep reinforcement learning</span> — Dolly → Jack → Balatron.</div><div class="captags"><span class="ctag rl">PyTorch</span><span class="ctag rl">PPO</span><span class="ctag rl">LSTM</span><span class="ctag rl">reward shaping</span></div></li>
+      <li style="--dc:var(--accent)"><div class="dt">Apr 2026</div><div class="ev"><span class="em">Agent tooling &amp; protocols</span> — context-keeper, llm-evals, skein.</div><div class="captags"><span class="ctag mcp">MCP protocol</span><span class="ctag mcp">agent memory</span><span class="ctag mcp">eval harnesses</span><span class="ctag mcp">A2A observability</span></div></li>
+      <li style="--dc:var(--rl)"><div class="dt">May 2026</div><div class="ev"><span class="em">Foundation models</span> — Clark generalizes across facilities.</div><div class="captags"><span class="ctag rl">transformers from scratch</span><span class="ctag rl">curriculum learning</span><span class="ctag rl">multi-process training</span><span class="ctag rl">symlog targets</span></div></li>
+      <li style="--dc:var(--accent)"><div class="dt">Jun 2026</div><div class="ev"><span class="em">Distributed systems</span> — agentsync coordinates agents with no server.</div><div class="captags"><span class="ctag mcp">git-as-CAS</span><span class="ctag mcp">concurrency</span><span class="ctag mcp">1,000-race stress testing</span></div></li>
+      <li style="--dc:var(--accent)"><div class="dt">Jul 2026 · shipped</div><div class="ev"><span class="em">Edge &amp; publishing</span> — the Xylem stack live on the official MCP registry.</div><div class="captags"><span class="ctag mcp">Cloudflare Workers + D1</span><span class="ctag mcp">packaging</span><span class="ctag mcp">PyPI + MCP registry</span></div></li>
+    </ul>
+
+    <div class="datacol">
+      <h4>Consistency</h4>
+      <p class="sm">A year of GitHub contributions — empty until I started, then relentless.</p>
+      <div class="heatwrap"><svg class="heat" id="heat" aria-label="GitHub contribution heatmap"></svg></div>
+      <div class="heatlegend">Less <i data-l="0"></i><i data-l="1"></i><i data-l="2"></i><i data-l="3"></i><i data-l="4"></i> More</div>
+    </div>
+
+    <div class="datacol">
+      <h4>Velocity</h4>
+      <p class="sm">Monthly contributions — still bending up.</p>
+      <svg class="chart" id="cadence" viewBox="0 0 560 210" preserveAspectRatio="none" aria-label="Monthly GitHub contributions"></svg>
+      <p class="cap" id="cadenceCap">Monthly GitHub contributions.</p>
     </div>
   </section>
 
@@ -360,6 +399,31 @@
     document.getElementById("cadenceCap").textContent=
       cad.total_year.toLocaleString()+" contributions in the last year — "+f.n+" in "+fmt(f.m)+" → "+l.n+" in "+fmt(l.m)+" (partial).";
   }
+  function renderHeat(hm){
+    var svg=document.getElementById("heat"); if(!svg||!hm||!hm.weeks)return;
+    var cell=11,gap=3,top=16,cols=hm.weeks.length,rows=7;
+    var W=cols*(cell+gap),H=top+rows*(cell+gap);
+    svg.setAttribute("viewBox","0 0 "+W+" "+H); svg.setAttribute("width",W); svg.setAttribute("height",H);
+    var NS="http://www.w3.org/2000/svg";
+    function mk(t,a){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);return e;}
+    var max=hm.max||1, op=[0,0.28,0.5,0.72,1];
+    function lvl(c){if(c<=0)return 0;var r=c/max;return r<=.25?1:r<=.5?2:r<=.75?3:4;}
+    var start=new Date(hm.start+"T00:00:00Z"),last=-1;
+    for(var w=0;w<cols;w++){
+      var cd=new Date(start.getTime()+w*7*864e5),mo=cd.getUTCMonth();
+      if(mo!==last){last=mo;var t=mk("text",{x:w*(cell+gap),y:11,"font-size":10,fill:"var(--muted)"});t.textContent=MONTHS[mo];svg.appendChild(t);}
+      for(var d=0;d<rows;d++){
+        var c=hm.weeks[w][d],lv=lvl(c);
+        var r=mk("rect",{x:w*(cell+gap),y:top+d*(cell+gap),width:cell,height:cell,rx:2,
+          fill:lv===0?"var(--grid)":"var(--accent)","fill-opacity":lv===0?1:op[lv]});
+        var ti=mk("title",{});ti.textContent=c+" contribution"+(c===1?"":"s");r.appendChild(ti);
+        svg.appendChild(r);
+      }
+    }
+    var legs=document.querySelectorAll(".heatlegend i");
+    for(var i=0;i<legs.length;i++){var l=+legs[i].getAttribute("data-l");
+      legs[i].style.background=l===0?"var(--grid)":"var(--accent)";legs[i].style.opacity=l===0?1:op[l];}
+  }
   renderStats(null); // paint immediately; refine with live data below
   fetch("data.json",{cache:"no-store"})
     .then(function(r){if(!r.ok)throw 0;return r.json();})
@@ -372,6 +436,7 @@
       renderStats(over);
       if(over.registry)document.getElementById("regline").textContent=over.registry+" servers";
       if(data.cadence&&data.cadence.months&&data.cadence.months.length)renderCadence(data.cadence);
+      if(data.heatmap)renderHeat(data.heatmap);
       if(data.generated)document.getElementById("fresh").textContent="Live data refreshed "+data.generated;
     })
     .catch(function(){});
