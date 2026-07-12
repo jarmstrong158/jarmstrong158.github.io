@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Jonathan Armstrong — Builder of Xylem | MCP &amp; AI agent infrastructure</title>
-<meta name="description" content="Jonathan Armstrong (jarmstrong158) builds Xylem — memory, coordination, and knowledge-lifecycle MCP servers for AI agents — plus reinforcement-learning agents for warehouse operations. Warehouse ops manager who shipped a production AI stack in six months.">
+<title>Jonathan Armstrong — AI/ML engineer | MCP infrastructure &amp; RL systems</title>
+<meta name="description" content="Jonathan Armstrong (jarmstrong158): AI/ML engineer. I build production MCP servers for AI agents and reinforcement-learning systems — and automate my own warehouse operations with them. Six months from first repo to a stack on the official MCP registry. Open to applied-AI / forward-deployed / ML engineering roles.">
 <meta name="author" content="Jonathan Armstrong">
 <link rel="canonical" href="https://jarmstrong158.github.io/">
 <meta property="og:type" content="profile">
-<meta property="og:title" content="Jonathan Armstrong — Builder of Xylem">
-<meta property="og:description" content="Memory, coordination &amp; knowledge-lifecycle MCP servers for AI agents, plus RL agents for warehouse ops. Six months from first repo to a production stack on the MCP registry.">
+<meta property="og:title" content="Jonathan Armstrong — AI/ML engineer">
+<meta property="og:description" content="I build production MCP infrastructure for AI agents and RL systems, and automate my own warehouse ops with them. Self-taught in six months. Open to applied-AI / ML engineering roles.">
 <meta property="og:url" content="https://jarmstrong158.github.io/">
 <meta name="twitter:card" content="summary">
 <meta name="theme-color" content="#0b7285">
@@ -23,8 +23,9 @@
   "url": "https://jarmstrong158.github.io/",
   "image": "https://avatars.githubusercontent.com/jarmstrong158",
   "jobTitle": "AI/ML Engineer",
-  "description": "Builder of Xylem — memory, coordination, and knowledge-lifecycle MCP servers for AI agents. Warehouse operations manager building production AI systems nights and weekends.",
-  "knowsAbout": ["Model Context Protocol", "MCP servers", "AI agents", "multi-agent systems", "reinforcement learning", "agent memory", "warehouse optimization", "LLM tooling"],
+  "description": "AI/ML engineer building production MCP servers for AI agents and reinforcement-learning systems. Warehouse operations manager, self-taught, shipping nights and weekends. Open to applied-AI, forward-deployed, and ML engineering roles.",
+  "knowsAbout": ["Model Context Protocol","MCP servers","AI agents","multi-agent systems","reinforcement learning","PyTorch","agent memory","warehouse optimization","LLM tooling","forward-deployed engineering"],
+  "seeks": { "@type": "Demand", "name": "Full-time applied-AI / forward-deployed / ML engineering role" },
   "sameAs": [
     "https://github.com/jarmstrong158",
     "https://www.linkedin.com/in/jonathan-armstrong-71b959361",
@@ -35,259 +36,345 @@
 </script>
 <style>
   :root{
-    --bg:#ffffff; --fg:#1a1f24; --muted:#5a6672; --line:#e6e9ec;
-    --card:#f7f9fa; --accent:#0b7285; --accent-fg:#ffffff; --chip:#eef2f4;
-    --grid:#eef1f3;
+    --bg:#ffffff; --fg:#1a1f24; --muted:#5a6672; --line:#e7eaed; --card:#f7f9fa;
+    --accent:#0b7285; --accent-fg:#fff; --chip:#eef2f4; --grid:#eef1f3;
+    --rl:#6741d9; --ops:#e8590c; --ok:#2b8a3e;
   }
   @media (prefers-color-scheme: dark){
-    :root{ --bg:#0e1116; --fg:#e6edf3; --muted:#9aa7b2; --line:#232a31;
-           --card:#161b22; --accent:#3bb3c9; --accent-fg:#06222a; --chip:#1c232b;
-           --grid:#1b2229; }
+    :root{ --bg:#0d1117; --fg:#e6edf3; --muted:#9aa7b2; --line:#222a31; --card:#161b22;
+      --accent:#3bb3c9; --accent-fg:#06222a; --chip:#1c232b; --grid:#1b2229;
+      --rl:#9a7bf0; --ops:#ff922b; --ok:#51cf66; }
   }
   *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
   body{margin:0;background:var(--bg);color:var(--fg);
-    font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-    -webkit-font-smoothing:antialiased}
+    font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
   a{color:var(--accent);text-decoration:none} a:hover{text-decoration:underline}
-  .wrap{max-width:900px;margin:0 auto;padding:0 20px}
-  header{padding:60px 0 22px}
-  .eyebrow{color:var(--accent);font-weight:600;letter-spacing:.04em;text-transform:uppercase;font-size:13px;margin:0 0 10px}
-  h1{font-size:clamp(29px,5.6vw,44px);line-height:1.1;margin:0 0 12px;letter-spacing:-.02em}
-  .lead{font-size:clamp(17px,2.4vw,20px);max-width:60ch;margin:0}
-  .sub{color:var(--muted);max-width:64ch;margin:10px 0 0}
-  .links{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0 0}
-  .btn{display:inline-block;padding:9px 15px;border-radius:9px;border:1px solid var(--line);
-    background:var(--card);color:var(--fg);font-weight:600;font-size:14px}
+  .wrap{max-width:1000px;margin:0 auto;padding:0 22px}
+  .badge{display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:600;
+    color:var(--ok);background:color-mix(in srgb,var(--ok) 12%,transparent);
+    border:1px solid color-mix(in srgb,var(--ok) 35%,transparent);border-radius:999px;padding:5px 12px}
+  .badge .d{width:8px;height:8px;border-radius:50%;background:var(--ok)}
+  header{padding:56px 0 12px}
+  .eyebrow{color:var(--muted);font-weight:600;letter-spacing:.03em;font-size:14px;margin:16px 0 10px}
+  h1{font-size:clamp(30px,5.4vw,50px);line-height:1.08;margin:0 0 16px;letter-spacing:-.02em}
+  h1 .hl{color:var(--accent)}
+  .lead{font-size:clamp(17px,2.2vw,21px);color:var(--fg);max-width:64ch;margin:0}
+  .lead b{font-weight:600}
+  .links{display:flex;flex-wrap:wrap;gap:10px;margin:26px 0 0}
+  .btn{display:inline-block;padding:10px 16px;border-radius:10px;border:1px solid var(--line);
+    background:var(--card);color:var(--fg);font-weight:600;font-size:14px;cursor:pointer}
   .btn.primary{background:var(--accent);color:var(--accent-fg);border-color:transparent}
-  h2{font-size:14px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);
-    margin:52px 0 4px;padding-top:26px;border-top:1px solid var(--line)}
-  .note{color:var(--muted);margin:0 0 18px;font-size:15px}
+  .btn:hover{text-decoration:none;border-color:var(--accent)}
 
-  /* stat strip */
-  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:8px 0 0}
-  @media (max-width:640px){.stats{grid-template-columns:repeat(2,1fr)}}
-  .stat{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px}
-  .stat .n{font-size:clamp(26px,4.5vw,34px);font-weight:700;letter-spacing:-.02em;line-height:1}
-  .stat .l{color:var(--muted);font-size:13px;margin-top:7px}
+  section{padding-top:16px}
+  h2{font-size:13px;text-transform:uppercase;letter-spacing:.09em;color:var(--accent);
+    margin:64px 0 6px;font-weight:700}
+  .h2sub{font-size:clamp(20px,3vw,26px);letter-spacing:-.01em;margin:0 0 8px;font-weight:650}
+  .note{color:var(--muted);margin:0 0 22px;max-width:70ch}
 
-  /* timeline */
-  .legend{display:flex;flex-wrap:wrap;gap:14px;margin:0 0 14px;font-size:13px;color:var(--muted)}
-  .legend span{display:inline-flex;align-items:center;gap:6px}
-  .dot{width:11px;height:11px;border-radius:50%;display:inline-block;flex:0 0 auto}
-  .tlscroll{overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:6px}
-  .timeline{position:relative;min-width:640px}
-  .axis{position:relative;height:22px;margin-left:96px;border-bottom:1px solid var(--line)}
-  .axis .mo{position:absolute;transform:translateX(-50%);font-size:12px;color:var(--muted);white-space:nowrap}
-  .lane{position:relative;height:46px;margin-left:96px;border-bottom:1px dashed var(--grid)}
-  .lane .lbl{position:absolute;left:-96px;top:50%;transform:translateY(-50%);width:88px;
-    font-size:11px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);text-align:right;line-height:1.2}
-  .node{position:absolute;top:50%;transform:translate(-50%,-50%);cursor:pointer;
-    width:13px;height:13px;border-radius:50%;border:2px solid var(--bg);transition:transform .12s}
-  .node:hover,.node.sel{transform:translate(-50%,-50%) scale(1.5)}
-  .node.feat{width:16px;height:16px}
-  .node .tag{position:absolute;left:50%;bottom:16px;transform:translateX(-50%);
-    white-space:nowrap;font-size:11px;font-weight:600;color:var(--fg);pointer-events:none;
-    background:var(--bg);padding:0 3px}
-  .anno{position:absolute;top:-4px;font-size:11px;color:var(--muted);transform:translateX(-50%);white-space:nowrap}
+  /* impact stats */
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:34px 0 0}
+  @media (max-width:720px){.stats{grid-template-columns:repeat(2,1fr)}}
+  .stat{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}
+  .stat .n{font-size:clamp(24px,4vw,32px);font-weight:750;letter-spacing:-.02em;line-height:1;color:var(--accent)}
+  .stat .l{color:var(--muted);font-size:13px;margin-top:8px;line-height:1.35}
 
-  /* detail panel */
-  .detail{margin-top:16px;background:var(--card);border:1px solid var(--line);border-radius:12px;
-    padding:16px 18px;min-height:96px}
-  .detail .top{display:flex;flex-wrap:wrap;align-items:baseline;gap:10px}
-  .detail h3{margin:0;font-size:18px}
-  .detail .when{color:var(--muted);font-size:13px}
-  .detail .metric{display:inline-block;margin-top:2px;font-size:13px;font-weight:600;color:var(--accent)}
-  .detail p{margin:8px 0 0;color:var(--fg)}
-  .detail .foot{margin-top:12px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+  /* about */
+  .about p{max-width:72ch;font-size:17px}
+  .after{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--accent);
+    border-radius:12px;padding:16px 18px;margin:20px 0 0;max-width:72ch}
+  .after b{color:var(--fg)}
+
+  /* work */
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  @media (max-width:720px){.grid{grid-template-columns:1fr}}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;display:flex;flex-direction:column}
+  .card.flag{grid-column:1/-1;border-color:color-mix(in srgb,var(--accent) 40%,var(--line))}
+  .card h3{margin:0 0 2px;font-size:18px}
+  .card h3 a{color:var(--fg)} .card h3 a:hover{color:var(--accent)}
+  .value{font-weight:650;color:var(--accent);margin:2px 0 8px;font-size:15px}
+  .card p{margin:0;color:var(--muted);font-size:14.5px}
+  .card .foot{margin-top:auto;padding-top:14px;display:flex;flex-wrap:wrap;gap:7px;align-items:center}
   .pill{font-size:12px;color:var(--muted);background:var(--chip);border-radius:999px;padding:3px 9px}
+  .pill.reg{color:var(--accent);background:color-mix(in srgb,var(--accent) 12%,transparent)}
+  .lnk{font-size:13px;font-weight:600}
+  .subgrid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-top:16px}
+  @media (max-width:720px){.subgrid{grid-template-columns:1fr}}
+  .sub{background:var(--bg);border:1px solid var(--line);border-radius:11px;padding:14px 15px}
+  .sub b{font-size:15px} .sub b a{color:var(--fg)}
+  .sub .v{color:var(--accent);font-weight:600;font-size:13px;margin:3px 0 5px}
+  .sub p{margin:0;color:var(--muted);font-size:13.5px}
+  .callout{margin-top:16px;font-size:14px;color:var(--muted);border-top:1px dashed var(--line);padding-top:14px}
+  .callout b{color:var(--fg)}
+  .more{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:4px}
+  @media (max-width:720px){.more{grid-template-columns:1fr}}
+  .mrow{display:flex;gap:10px;font-size:14.5px;padding:11px 14px;background:var(--card);border:1px solid var(--line);border-radius:11px}
+  .mrow b{white-space:nowrap} .mrow b a{color:var(--fg)} .mrow span{color:var(--muted)}
 
-  /* cadence */
-  .chart{width:100%;height:200px;display:block}
+  /* trajectory */
+  .traj{display:grid;grid-template-columns:1.1fr 1fr;gap:28px;align-items:start}
+  @media (max-width:760px){.traj{grid-template-columns:1fr;gap:8px}}
+  .mile{position:relative;margin:0;padding:0;list-style:none}
+  .mile li{position:relative;padding:0 0 20px 26px;border-left:2px solid var(--line)}
+  .mile li:last-child{border-left-color:transparent}
+  .mile li::before{content:"";position:absolute;left:-7px;top:2px;width:12px;height:12px;border-radius:50%;background:var(--accent);border:2px solid var(--bg)}
+  .mile .dt{font-size:12px;font-weight:700;letter-spacing:.03em;color:var(--accent);text-transform:uppercase}
+  .mile .ev{font-size:15px;margin-top:2px} .mile .ev b{font-weight:650}
+  .chart{width:100%;height:210px;display:block;margin-top:6px}
   .chart text{fill:var(--muted);font-size:12px}
-  .cap{color:var(--muted);font-size:14px;margin:10px 0 0}
+  .cap{color:var(--muted);font-size:13.5px;margin:8px 0 0}
 
-  footer{margin:56px 0 40px;padding-top:22px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
-  .fresh{color:var(--muted);font-size:12px;margin-top:6px}
+  /* tech */
+  .tech{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media (max-width:720px){.tech{grid-template-columns:1fr}}
+  .techrow b{display:block;font-size:13px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);margin-bottom:8px}
+  .tags{display:flex;flex-wrap:wrap;gap:7px}
+  .tag{font-size:13px;background:var(--chip);border:1px solid var(--line);border-radius:8px;padding:4px 10px}
+
+  /* contact */
+  .contact{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:28px;text-align:center;margin-top:20px}
+  .contact h3{font-size:clamp(20px,3vw,26px);margin:0 0 8px}
+  .contact p{color:var(--muted);max-width:60ch;margin:0 auto 18px}
+
+  footer{margin:52px 0 44px;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);font-size:13.5px;display:flex;flex-wrap:wrap;gap:6px;justify-content:space-between}
 </style>
 </head>
 <body>
 <div class="wrap">
 
   <header>
+    <span class="badge"><span class="d"></span>Open to full-time roles</span>
     <p class="eyebrow">Jonathan Armstrong · jarmstrong158</p>
-    <h1>Builder of <strong>Xylem</strong> — infrastructure that gives AI agents memory, coordination, and a knowledge lifecycle.</h1>
-    <p class="lead">AI/ML engineer shipping production Model&nbsp;Context&nbsp;Protocol (MCP) servers and reinforcement-learning agents.</p>
-    <p class="sub">Warehouse operations manager by day; I taught myself to build production AI systems on nights and weekends — a lot of it from my phone. The timeline below is real, pulled live from GitHub.</p>
+    <h1>I build <span class="hl">AI-agent infrastructure</span> and <span class="hl">reinforcement-learning systems</span> — and automate my own warehouse with them.</h1>
+    <p class="lead">AI/ML engineer, self-taught. In six months I went from a CLI that taught me Git to a production stack of MCP servers on the official registry, a foundation RL model for workforce scheduling, and automation that saves my team ~25 hours a week. I ship end-to-end and I'm honest about what my tools can't do.</p>
     <div class="links">
-      <a class="btn primary" href="https://github.com/jarmstrong158">GitHub</a>
-      <a class="btn" href="https://jarmstrong158.github.io/Xylem/">Xylem stack</a>
-      <a class="btn" href="https://registry.modelcontextprotocol.io/v0.1/servers?search=io.github.jarmstrong158">MCP registry</a>
+      <a class="btn primary" href="#work">See the work</a>
+      <a class="btn" href="https://github.com/jarmstrong158">GitHub</a>
       <a class="btn" href="https://www.linkedin.com/in/jonathan-armstrong-71b959361">LinkedIn</a>
       <a class="btn" href="mailto:jarmstrong158@gmail.com">Email</a>
     </div>
+
+    <div class="stats" id="stats"></div>
   </header>
 
-  <main>
-    <div class="stats" id="stats"></div>
+  <section class="about">
+    <h2>About</h2>
+    <div class="h2sub">A domain expert who taught himself to ship production AI.</div>
+    <p>I run operations at a warehouse. Six months ago I decided to learn to build software — I started by writing a little CLI to teach <em>myself</em> Git. Since then I've built in the open, nights and weekends and a lot of it from my phone: reinforcement-learning agents that schedule a real workforce, a stack of Model Context Protocol servers now live on the official MCP registry, and tools that automate my own job.</p>
+    <p>The thread through all of it: I understand the domain I'm optimizing, I build the whole thing (model → server → deploy → docs), and I don't oversell — every project's README states what it <em>doesn't</em> do. That combination is what I want to bring to a team.</p>
+    <div class="after"><b>What I'm after:</b> a full-time role in <b>applied AI</b>, <b>forward-deployed engineering</b>, or <b>ML engineering</b> — somewhere domain understanding and shipping speed both count. If that's a fit, <a href="mailto:jarmstrong158@gmail.com">let's talk</a>.</div>
+  </section>
 
-    <h2>The arc — six months of shipping</h2>
-    <p class="note">Every public repo, on its ship date, colored by thread. From <strong>git-onboard</strong> (a CLI to <em>learn</em> Git) to <strong>Xylem</strong> (a production system built <em>on</em> Git) — click any point.</p>
-    <div class="legend" id="legend"></div>
-    <div class="tlscroll"><div class="timeline" id="timeline"></div></div>
-    <div class="detail" id="detail"><p class="note" style="margin:0">Select a project on the timeline to see details.</p></div>
+  <section id="work">
+    <h2>What I build · 01</h2>
+    <div class="h2sub">AI-agent infrastructure — the <a href="https://jarmstrong158.github.io/Xylem/">Xylem</a> stack</div>
+    <p class="note">Run more than one AI coding agent on the same repo and two things break: they <em>forget</em> between sessions, and they <em>overwrite</em> each other. Xylem fixes both — with no server of its own, because <code>git push</code> already enforces "only save if nobody changed this first." A phone and a desktop become equal peers.</p>
+    <div class="card flag">
+      <div class="subgrid">
+        <div class="sub">
+          <b><a href="https://github.com/jarmstrong158/context-keeper">context-keeper</a></b>
+          <div class="v">Your agents stop forgetting</div>
+          <p>Records the <em>why</em> behind decisions in editable JSON, so a fresh session starts oriented. ~92% less context loaded vs. dumping the store; says "I don't know" instead of guessing.</p>
+        </div>
+        <div class="sub">
+          <b><a href="https://github.com/jarmstrong158/agentsync">agentsync</a></b>
+          <div class="v">Two agents, one repo, zero collisions</div>
+          <p>Server-less coordination — claims live on a git branch and <code>git push</code> is the lock. 1,000 simulated concurrent races: zero lost, zero double-granted.</p>
+        </div>
+        <div class="sub">
+          <b><a href="https://github.com/jarmstrong158/cambium">cambium</a></b>
+          <div class="v">Lessons that compound</div>
+          <p>Distills finished work into recallable knowledge and promotes it by earned trust — local → team → org — so the team learns instead of relearning.</p>
+        </div>
+      </div>
+      <div class="callout"><b>Live on the official MCP registry</b> — <span id="regline">seven servers</span> under my namespace, installable from PyPI, with Cloudflare Worker remotes so <b>claude.ai on your phone is a full peer</b>, not a viewer. → <a href="https://jarmstrong158.github.io/Xylem/">interactive explainer</a> · <a href="https://github.com/jarmstrong158/xylem">source</a></div>
+    </div>
+  </section>
 
-    <h2>Shipping cadence</h2>
-    <p class="note">Monthly GitHub contributions. The line is still bending up.</p>
-    <svg class="chart" id="cadence" viewBox="0 0 720 200" preserveAspectRatio="none" aria-label="Monthly contributions chart"></svg>
-    <p class="cap" id="cadenceCap"></p>
-  </main>
+  <section>
+    <h2>What I build · 02</h2>
+    <div class="h2sub">Reinforcement learning for operations</div>
+    <p class="note">I run a warehouse, so I built RL agents that schedule a warehouse workforce — then generalized them. Numbers below are from held-out simulation, labeled as such.</p>
+    <div class="grid">
+      <div class="card">
+        <h3><a href="https://github.com/jarmstrong158/Clark">Clark</a></h3>
+        <div class="value">Schedule any facility, not just one</div>
+        <p>A foundation RL model — variable-shape transformer + LSTM (~18M params), 3-stage curriculum. Pretrain once, fine-tune a new facility in ~30 min, holding <b>~93% order completion from 5 to 50 workers</b> (sim). The generalization result.</p>
+        <div class="foot"><span class="pill">PyTorch</span><span class="pill">PPO</span><span class="pill">transformer</span><a class="lnk" href="https://github.com/jarmstrong158/Clark">Repo →</a></div>
+      </div>
+      <div class="card">
+        <h3><a href="https://github.com/jarmstrong158/Jack">Jack</a></h3>
+        <div class="value">The proof it works</div>
+        <p>PPO + LSTM with temporal memory: <b>98.2% order completion across ~9.4 simulated years</b> on a single facility. The validated predecessor that Clark generalizes.</p>
+        <div class="foot"><span class="pill">LSTM</span><span class="pill">temporal memory</span><a class="lnk" href="https://github.com/jarmstrong158/Jack">Repo →</a></div>
+      </div>
+      <div class="card">
+        <h3><a href="https://github.com/jarmstrong158/Balatron">Balatron</a></h3>
+        <div class="value">RL that plays to win</div>
+        <p>An autonomous Balatro agent: PPO policy + a forward-simulating build planner + tactical heuristics, measured on a held-out fixed-seed harness. <b>Confirmed white-stake wins.</b></p>
+        <div class="foot"><span class="pill">hybrid agent</span><span class="pill">search + policy</span><a class="lnk" href="https://github.com/jarmstrong158/Balatron">Repo →</a></div>
+      </div>
+      <div class="card">
+        <h3><a href="https://github.com/jarmstrong158/clark-mcp">clark-mcp</a></h3>
+        <div class="value">Talk to the model, offline</div>
+        <p>A fully-local natural-language interface to the Clark agent — MCP server + offline hermes3 client. No cloud, no API cost.</p>
+        <div class="foot"><span class="pill">local LLM</span><span class="pill">MCP</span><a class="lnk" href="https://github.com/jarmstrong158/clark-mcp">Repo →</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>What I build · 03</h2>
+    <div class="h2sub">Automation that saves real hours</div>
+    <p class="note">The fastest way to prove software matters is to automate your own job. These run in production at my warehouse.</p>
+    <div class="grid">
+      <div class="card">
+        <h3><a href="https://github.com/jarmstrong158/shipexec-metrics-tracker">ShipExec metrics tracker</a></h3>
+        <div class="value">~25 labor-hours a week, back</div>
+        <p>Automates a manual daily shipping-metrics reporting workflow across the team — Selenium + pandas + Excel. In production use today.</p>
+        <div class="foot"><span class="pill">Selenium</span><span class="pill">pandas</span><a class="lnk" href="https://github.com/jarmstrong158/shipexec-metrics-tracker">Repo →</a></div>
+      </div>
+      <div class="card">
+        <h3><a href="https://github.com/jarmstrong158/barcode-label-maker">Barcode label maker</a></h3>
+        <div class="value">Print-ready labels from a spreadsheet</div>
+        <p>Generates Avery barcode PDFs from an Excel pick-list — auto-shrinking SKUs, width-fit Code 39. In production; ships a synthetic catalog so real data stays private.</p>
+        <div class="foot"><span class="pill">Python</span><span class="pill">PDF</span><a class="lnk" href="https://github.com/jarmstrong158/barcode-label-maker">Repo →</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>What I build · 04</h2>
+    <div class="h2sub">More agent tooling &amp; platforms</div>
+    <div class="more">
+      <div class="mrow"><b><a href="https://github.com/jarmstrong158/skillmatch-mcp">skillmatch-mcp</a></b><span>A job-fit analyzer that scores your resume + GitHub against a JD — yes, built during my own job search.</span></div>
+      <div class="mrow"><b><a href="https://github.com/jarmstrong158/skein">skein</a></b><span>Local-first observability for multi-agent (A2A) message flows — deterministic failure-cascade detection. 71/71 tests.</span></div>
+      <div class="mrow"><b><a href="https://github.com/jarmstrong158/waveform-MCP">waveform-MCP</a></b><span>150+ tools giving Claude full control of a DAW — compose, mix, master, render. My largest tool surface.</span></div>
+      <div class="mrow"><b><a href="https://github.com/jarmstrong158/llm-evals">llm-evals</a></b><span>Eval framework for LLM tools and agents — swappable executors + scorers, regression detection built in.</span></div>
+      <div class="mrow"><b><a href="https://github.com/jarmstrong158/Conductor">Conductor</a></b><span>Local automation platform with a web dashboard — Redis workers, scheduled tasks, 22 MCP tools. Shipped as a Windows product.</span></div>
+      <div class="mrow"><b><a href="https://github.com/jarmstrong158/rag-pipeline">rag-pipeline</a></b><span>Fully-local document Q&amp;A (llama.cpp + Llama 3.2 + nomic-embed). No cloud, no external vector DB.</span></div>
+    </div>
+    <p class="cap" style="margin-top:14px">…and more — full list on <a href="https://github.com/jarmstrong158?tab=repositories">GitHub</a>.</p>
+  </section>
+
+  <section>
+    <h2>The trajectory</h2>
+    <div class="h2sub">Six months, first repo to production stack.</div>
+    <p class="note">Not a bootcamp — a job, a phone, and every spare hour. The cadence is still bending up (live from GitHub).</p>
+    <div class="traj">
+      <ul class="mile">
+        <li><div class="dt">Feb 2026</div><div class="ev">Day one — wrote <b>git-onboard</b>, a CLI to teach myself Git &amp; GitHub.</div></li>
+        <li><div class="dt">Mar 2026</div><div class="ev">First RL agents: <b>Dolly → Jack</b> (98.2% order completion in sim).</div></li>
+        <li><div class="dt">Apr 2026</div><div class="ev">First MCP server: <b>context-keeper</b> — rationale-first agent memory.</div></li>
+        <li><div class="dt">May–Jun 2026</div><div class="ev"><b>Clark</b> (foundation RL) + <b>agentsync</b> (server-less coordination).</div></li>
+        <li><div class="dt">Jul 2026</div><div class="ev"><b>Xylem</b> shipped — a stack of servers live on the official MCP registry.</div></li>
+      </ul>
+      <div>
+        <svg class="chart" id="cadence" viewBox="0 0 560 210" preserveAspectRatio="none" aria-label="Monthly GitHub contributions"></svg>
+        <p class="cap" id="cadenceCap">Monthly GitHub contributions.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Stack</h2>
+    <div class="h2sub">What I reach for.</div>
+    <div class="tech">
+      <div class="techrow"><b>Languages</b><div class="tags"><span class="tag">Python</span><span class="tag">TypeScript</span><span class="tag">JavaScript</span><span class="tag">SQL</span></div></div>
+      <div class="techrow"><b>ML / RL</b><div class="tags"><span class="tag">PyTorch</span><span class="tag">PPO</span><span class="tag">LSTM</span><span class="tag">Transformers (from scratch)</span><span class="tag">Curriculum learning</span><span class="tag">DreamerV3 symlog</span></div></div>
+      <div class="techrow"><b>Agents / LLM</b><div class="tags"><span class="tag">MCP</span><span class="tag">A2A</span><span class="tag">Claude API</span><span class="tag">llama.cpp</span><span class="tag">Ollama</span><span class="tag">RAG</span></div></div>
+      <div class="techrow"><b>Infra / Web</b><div class="tags"><span class="tag">Cloudflare Workers + D1</span><span class="tag">FastAPI</span><span class="tag">Flask</span><span class="tag">Redis</span><span class="tag">SQLite</span><span class="tag">React</span><span class="tag">Supabase</span><span class="tag">git-as-CAS</span></div></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="contact">
+      <h3>Looking for applied-AI, forward-deployed, or ML engineering work.</h3>
+      <p>If you want someone who understands the domain, builds the whole thing, and ships fast — I'd love to talk.</p>
+      <div class="links" style="justify-content:center">
+        <a class="btn primary" href="mailto:jarmstrong158@gmail.com">Email me</a>
+        <a class="btn" href="https://www.linkedin.com/in/jonathan-armstrong-71b959361">LinkedIn</a>
+        <a class="btn" href="https://github.com/jarmstrong158">GitHub</a>
+      </div>
+    </div>
+  </section>
 
   <footer>
-    <p><strong>Jonathan Armstrong</strong> — AI/ML engineer. Find me as <a href="https://github.com/jarmstrong158">jarmstrong158</a> on GitHub, the <a href="https://registry.modelcontextprotocol.io/v0.1/servers?search=io.github.jarmstrong158">MCP registry</a>, <a href="https://pypi.org/user/jarmstrong158/">PyPI</a>, and <a href="https://www.linkedin.com/in/jonathan-armstrong-71b959361">LinkedIn</a>.</p>
-    <p class="fresh" id="fresh"></p>
+    <span><strong>Jonathan Armstrong</strong> · jarmstrong158</span>
+    <span id="fresh"></span>
   </footer>
 </div>
 
 <script>
 (function(){
   var MONTHS=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
-  function el(t,c,h){var e=document.createElement(t);if(c)e.className=c;if(h!=null)e.innerHTML=h;return e;}
-  function days(d){return Math.floor(new Date(d+"T00:00:00Z").getTime()/8.64e7);}
   function fmt(d){var p=d.split("-");return MONTHS[(+p[1])-1]+" "+p[0];}
-
-  function countUp(node,target){
-    node.textContent=Number(target).toLocaleString();   // guaranteed final value
+  function countUp(node,target,suffix){
+    suffix=suffix||"";
+    node.textContent=Number(target).toLocaleString()+suffix;
     var reduce=window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if(reduce||!window.requestAnimationFrame)return;
-    var t0=null,dur=900;
-    function step(ts){ if(!t0)t0=ts; var p=Math.min(1,(ts-t0)/dur);
-      var e=1-Math.pow(1-p,3); node.textContent=Math.round(target*e).toLocaleString();
-      if(p<1)requestAnimationFrame(step); else node.textContent=Number(target).toLocaleString(); }
+    var t0=null;
+    function step(ts){ if(!t0)t0=ts; var p=Math.min(1,(ts-t0)/900);var e=1-Math.pow(1-p,3);
+      node.textContent=Math.round(target*e).toLocaleString()+suffix;
+      if(p<1)requestAnimationFrame(step); else node.textContent=Number(target).toLocaleString()+suffix; }
     requestAnimationFrame(step);
   }
-
-  function renderStats(stats){
-    var wrap=document.getElementById("stats");
-    stats.forEach(function(s){
-      if(s.value==null)return;
-      var c=el("div","stat");var n=el("div","n","0");c.appendChild(n);
-      c.appendChild(el("div","l",s.label)); wrap.appendChild(c);
-      countUp(n, s.value);
+  // impact stats: {value,label,suffix,live?}  live values overridden from data.json
+  var STATS=[
+    {key:"hours",  value:25,  suffix:"", label:"labor-hours a week saved at my warehouse"},
+    {key:"registry",value:7,  suffix:"", label:"MCP servers live on the official registry"},
+    {key:"rl",     value:98.2,suffix:"%",label:"order completion, RL scheduler (simulation)"},
+    {key:"contrib",value:935, suffix:"", label:"GitHub contributions in six months"}
+  ];
+  function renderStats(over){
+    var wrap=document.getElementById("stats"); wrap.innerHTML="";
+    STATS.forEach(function(s){
+      var val=(over&&over[s.key]!=null)?over[s.key]:s.value;
+      var c=document.createElement("div");c.className="stat";
+      var n=document.createElement("div");n.className="n";n.textContent="0";
+      var l=document.createElement("div");l.className="l";l.textContent=s.label;
+      c.appendChild(n);c.appendChild(l);wrap.appendChild(c);
+      countUp(n,val,s.suffix);
     });
   }
-
-  function renderLegend(threads){
-    var lg=document.getElementById("legend");
-    Object.keys(threads).forEach(function(k){
-      var t=threads[k];var s=el("span",null,'');
-      var d=el("span","dot");d.style.background=t.color;s.appendChild(d);
-      s.appendChild(document.createTextNode(t.label)); lg.appendChild(s);
-    });
-  }
-
-  function renderTimeline(data){
-    var tl=document.getElementById("timeline");
-    var ps=data.projects.slice().sort(function(a,b){return days(a.date)-days(b.date);});
-    var t0=days(ps[0].date), t1=days(new Date().toISOString().slice(0,10));
-    if(t1<=t0)t1=days(ps[ps.length-1].date)+1;
-    function x(d){return ((days(d)-t0)/(t1-t0))*100;}
-
-    // month axis
-    var axis=el("div","axis");
-    var start=ps[0].date.slice(0,7).split("-"), y=+start[0], m=+start[1];
-    var cur=new Date().toISOString().slice(0,7).split("-"), ey=+cur[0], em=+cur[1];
-    while(y<ey||(y===ey&&m<=em)){
-      var ds=y+"-"+String(m).padStart(2,"0")+"-01";
-      var lab=el("div","mo",MONTHS[m-1]); lab.style.left=Math.max(0,Math.min(100,x(ds)))+"%";
-      axis.appendChild(lab); m++; if(m>12){m=1;y++;}
-    }
-    tl.appendChild(axis);
-
-    var order=Object.keys(data.threads);
-    var lanes={};
-    order.forEach(function(k){
-      var lane=el("div","lane"); lane.appendChild(el("div","lbl",data.threads[k].label.split(" ")[0]));
-      lanes[k]=lane; tl.appendChild(lane);
-    });
-
-    var detail=document.getElementById("detail");
-    function select(p,node){
-      Array.prototype.forEach.call(tl.querySelectorAll(".node.sel"),function(n){n.classList.remove("sel");});
-      if(node)node.classList.add("sel");
-      var langStar=[];
-      if(p.language)langStar.push('<span class="pill">'+p.language+'</span>');
-      if(p.stars)langStar.push('<span class="pill">★ '+p.stars+'</span>');
-      langStar.push('<span class="pill">shipped '+fmt(p.date)+'</span>');
-      detail.innerHTML=
-        '<div class="top"><h3><a href="'+p.url+'">'+p.name+'</a></h3>'+
-        (p.metric?'<span class="metric">'+p.metric+'</span>':'')+'</div>'+
-        '<p>'+(p.blurb||'')+'</p>'+
-        '<div class="foot">'+langStar.join('')+
-        ' <a class="btn" style="padding:5px 12px" href="'+p.url+'">View repo →</a></div>';
-    }
-
-    ps.forEach(function(p){
-      var lane=lanes[p.thread]||lanes[order[0]];
-      var node=el("div","node"+(p.featured?" feat":""));
-      node.style.left=x(p.date)+"%"; node.style.background=data.threads[p.thread].color;
-      node.title=p.name;
-      if(p.featured){ var tag=el("div","tag",p.name); node.appendChild(tag); }
-      node.addEventListener("click",function(){select(p,node);});
-      lane.appendChild(node);
-    });
-
-    // default selection: the flagship
-    var flag=ps.filter(function(p){return p.name==="Xylem";})[0]||ps[ps.length-1];
-    var fnode=tl.querySelectorAll(".node"); select(flag,null);
-  }
-
   function renderCadence(cad){
-    var svg=document.getElementById("cadence");
-    var m=cad.months, W=720,H=200,pl=34,pr=12,pt=14,pb=26;
+    var svg=document.getElementById("cadence"), m=cad.months;
+    var W=560,H=210,pl=32,pr=10,pt=16,pb=26;
     var max=Math.max.apply(null,m.map(function(d){return d.n;}))||1;
     var iw=W-pl-pr, ih=H-pt-pb, n=m.length;
-    function px(i){return pl + (n===1?iw/2:(i/(n-1))*iw);}
-    function py(v){return pt + ih - (v/max)*ih;}
+    function px(i){return pl+(n===1?iw/2:(i/(n-1))*iw);} function py(v){return pt+ih-(v/max)*ih;}
     var NS="http://www.w3.org/2000/svg";
     function mk(t,a){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);return e;}
-    // gridlines
-    [0,0.5,1].forEach(function(f){
-      var yv=Math.round(max*f), yy=py(yv);
+    [0,0.5,1].forEach(function(f){var yv=Math.round(max*f),yy=py(yv);
       svg.appendChild(mk("line",{x1:pl,y1:yy,x2:W-pr,y2:yy,stroke:"var(--grid)","stroke-width":1}));
-      svg.appendChild(mk("text",{x:pl-6,y:yy+4,"text-anchor":"end"})).textContent=yv;
-    });
-    // area
-    var d="M"+px(0)+" "+py(m[0].n);
-    for(var i=1;i<n;i++)d+=" L"+px(i)+" "+py(m[i].n);
-    var area=d+" L"+px(n-1)+" "+py(0)+" L"+px(0)+" "+py(0)+" Z";
-    svg.appendChild(mk("path",{d:area,fill:"var(--accent)","fill-opacity":.14}));
+      var tx=mk("text",{x:pl-6,y:yy+4,"text-anchor":"end"});tx.textContent=yv;svg.appendChild(tx);});
+    var d="M"+px(0)+" "+py(m[0].n);for(var i=1;i<n;i++)d+=" L"+px(i)+" "+py(m[i].n);
+    svg.appendChild(mk("path",{d:d+" L"+px(n-1)+" "+py(0)+" L"+px(0)+" "+py(0)+" Z",fill:"var(--accent)","fill-opacity":.14}));
     svg.appendChild(mk("path",{d:d,fill:"none",stroke:"var(--accent)","stroke-width":2.5,"stroke-linejoin":"round"}));
-    m.forEach(function(pt2,i){
-      svg.appendChild(mk("circle",{cx:px(i),cy:py(pt2.n),r:3.5,fill:"var(--accent)"}));
-      var v=mk("text",{x:px(i),y:py(pt2.n)-9,"text-anchor":"middle"});v.textContent=pt2.n;v.setAttribute("fill","var(--fg)");svg.appendChild(v);
-      var lx=mk("text",{x:px(i),y:H-8,"text-anchor":"middle"});lx.textContent=MONTHS[(+pt2.m.split("-")[1])-1];svg.appendChild(lx);
-    });
-    var first=m[0], last=m[m.length-1];
+    m.forEach(function(p,i){svg.appendChild(mk("circle",{cx:px(i),cy:py(p.n),r:3.5,fill:"var(--accent)"}));
+      var v=mk("text",{x:px(i),y:py(p.n)-9,"text-anchor":"middle","fill":"var(--fg)"});v.textContent=p.n;svg.appendChild(v);
+      var lx=mk("text",{x:px(i),y:H-8,"text-anchor":"middle"});lx.textContent=MONTHS[(+p.m.split("-")[1])-1];svg.appendChild(lx);});
+    var f=m[0],l=m[m.length-1];
     document.getElementById("cadenceCap").textContent=
-      cad.total_year.toLocaleString()+" contributions in the last year — from "+first.n+
-      " in "+fmt(first.m)+" to "+last.n+" in "+fmt(last.m)+" (partial month).";
+      cad.total_year.toLocaleString()+" contributions in the last year — "+f.n+" in "+fmt(f.m)+" → "+l.n+" in "+fmt(l.m)+" (partial).";
   }
-
-  function fallback(){
-    document.getElementById("timeline").innerHTML=
-      '<p class="note">Live timeline unavailable here — see the raw <a href="data.json">data.json</a> or my <a href="https://github.com/jarmstrong158">GitHub</a>.</p>';
-  }
-
+  renderStats(null); // paint immediately; refine with live data below
   fetch("data.json",{cache:"no-store"})
-    .then(function(r){if(!r.ok)throw new Error("HTTP "+r.status);return r.json();})
+    .then(function(r){if(!r.ok)throw 0;return r.json();})
     .then(function(data){
-      renderStats(data.stats);
-      renderLegend(data.threads);
-      renderTimeline(data);
-      renderCadence(data.cadence);
-      if(data.generated)document.getElementById("fresh").textContent="Live data refreshed "+data.generated+".";
+      var over={};
+      (data.stats||[]).forEach(function(s){
+        if(/registry/i.test(s.label))over.registry=s.value;
+        if(/contribution/i.test(s.label))over.contrib=s.value;
+      });
+      renderStats(over);
+      if(over.registry)document.getElementById("regline").textContent=over.registry+" servers";
+      if(data.cadence&&data.cadence.months&&data.cadence.months.length)renderCadence(data.cadence);
+      if(data.generated)document.getElementById("fresh").textContent="Live data refreshed "+data.generated;
     })
-    .catch(fallback);
+    .catch(function(){});
 })();
 </script>
 </body>
