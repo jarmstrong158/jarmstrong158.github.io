@@ -156,10 +156,13 @@
   function fmt(d){var p=d.split("-");return MONTHS[(+p[1])-1]+" "+p[0];}
 
   function countUp(node,target){
+    node.textContent=Number(target).toLocaleString();   // guaranteed final value
+    var reduce=window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if(reduce||!window.requestAnimationFrame)return;
     var t0=null,dur=900;
     function step(ts){ if(!t0)t0=ts; var p=Math.min(1,(ts-t0)/dur);
       var e=1-Math.pow(1-p,3); node.textContent=Math.round(target*e).toLocaleString();
-      if(p<1)requestAnimationFrame(step); }
+      if(p<1)requestAnimationFrame(step); else node.textContent=Number(target).toLocaleString(); }
     requestAnimationFrame(step);
   }
 
