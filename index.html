@@ -121,7 +121,7 @@
   .mile li::before{content:"";position:absolute;left:-7px;top:2px;width:12px;height:12px;border-radius:50%;background:var(--accent);border:2px solid var(--bg)}
   .mile .dt{font-size:12px;font-weight:700;letter-spacing:.03em;color:var(--accent);text-transform:uppercase}
   .mile .ev{font-size:15px;margin-top:2px} .mile .ev b{font-weight:650}
-  .chart{width:100%;height:210px;display:block;margin-top:6px}
+  .chart{width:100%;max-width:640px;height:auto;display:block;margin-top:6px}
   .chart text{fill:var(--muted);font-size:12px}
   .cap{color:var(--muted);font-size:13.5px;margin:8px 0 0}
 
@@ -313,7 +313,7 @@
     <div class="datacol">
       <h4>Velocity</h4>
       <p class="sm">Monthly contributions — still bending up.</p>
-      <svg class="chart" id="cadence" viewBox="0 0 560 210" preserveAspectRatio="none" aria-label="Monthly GitHub contributions"></svg>
+      <svg class="chart" id="cadence" viewBox="0 0 560 210" aria-label="Monthly GitHub contributions"></svg>
       <p class="cap" id="cadenceCap">Monthly GitHub contributions.</p>
     </div>
   </section>
