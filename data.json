@@ -285,7 +285,7 @@
       },
       {
         "m": "2026-04",
-        "n": 128
+        "n": 127
       },
       {
         "m": "2026-05",
@@ -293,14 +293,14 @@
       },
       {
         "m": "2026-06",
-        "n": 246
+        "n": 247
       },
       {
         "m": "2026-07",
-        "n": 199
+        "n": 200
       }
     ],
-    "total_year": 935
+    "total_year": 936
   },
   "stats": [
     {
@@ -309,7 +309,7 @@
     },
     {
       "label": "contributions (last year)",
-      "value": 935
+      "value": 936
     },
     {
       "label": "months, first repo to production stack",
