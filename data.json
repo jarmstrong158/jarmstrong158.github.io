@@ -35,7 +35,7 @@
       "name": "shipexec-metrics-tracker",
       "thread": "tools",
       "blurb": "Automated daily warehouse shipping reports (Selenium + pandas + Excel).",
-      "metric": "~25 labor-hrs/week saved \u00b7 in production",
+      "metric": "~20 labor-hrs/week saved \u00b7 proof of concept",
       "featured": false,
       "date": "2026-02-26",
       "updated": "2026-07-12",

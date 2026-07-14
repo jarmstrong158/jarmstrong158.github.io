@@ -8,7 +8,7 @@
   },
   "projects": {
     "git-onboard":              { "thread": "tools", "featured": true,  "blurb": "Where it started: a CLI that walks complete beginners through Git and GitHub, explaining every command in plain English.", "metric": "the starting line" },
-    "shipexec-metrics-tracker": { "thread": "tools", "blurb": "Automated daily warehouse shipping reports (Selenium + pandas + Excel).", "metric": "~25 labor-hrs/week saved · in production" },
+    "shipexec-metrics-tracker": { "thread": "tools", "blurb": "Automated daily warehouse shipping reports (Selenium + pandas + Excel).", "metric": "~20 labor-hrs/week saved · proof of concept" },
     "Balatron":                 { "thread": "rl",    "featured": true,  "blurb": "Autonomous Balatro agent: PPO policy + forward-simulating planner + heuristics, measured on a held-out fixed-seed harness.", "metric": "confirmed white-stake wins" },
     "Dolly":                    { "thread": "rl",    "blurb": "The earliest warehouse RL simulation — where the Dolly → Jack → Clark line began.", "metric": "the seed of the RL thread" },
     "Jack":                     { "thread": "rl",    "featured": true,  "blurb": "PPO + LSTM agent with temporal memory for warehouse scheduling; validated single-facility predecessor to Clark.", "metric": "98.2% order completion (sim)" },
