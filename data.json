@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-15",
+  "generated": "2026-07-16",
   "threads": {
     "mcp": {
       "label": "MCP & agent infrastructure",
@@ -778,6 +778,7 @@
         88,
         12,
         7,
+        0,
         0
       ]
     ]
