@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-19",
+  "generated": "2026-07-20",
   "threads": {
     "mcp": {
       "label": "MCP & agent infrastructure",
@@ -194,7 +194,7 @@
       "metric": "",
       "featured": false,
       "date": "2026-06-01",
-      "updated": "2026-07-12",
+      "updated": "2026-07-20",
       "language": "TypeScript",
       "stars": 0,
       "url": "https://github.com/jarmstrong158/vanguard-web"
@@ -266,7 +266,7 @@
       "metric": "5 servers live on the official MCP registry",
       "featured": true,
       "date": "2026-07-08",
-      "updated": "2026-07-18",
+      "updated": "2026-07-19",
       "language": "Python",
       "stars": 0,
       "url": "https://github.com/jarmstrong158/Xylem"
@@ -775,7 +775,8 @@
         13
       ],
       [
-        1
+        1,
+        0
       ]
     ]
   },
