@@ -266,7 +266,7 @@
       "metric": "5 servers live on the official MCP registry",
       "featured": true,
       "date": "2026-07-08",
-      "updated": "2026-07-23",
+      "updated": "2026-07-24",
       "language": "Python",
       "stars": 0,
       "url": "https://github.com/jarmstrong158/Xylem"
@@ -297,10 +297,10 @@
       },
       {
         "m": "2026-07",
-        "n": 395
+        "n": 399
       }
     ],
-    "total_year": 1131
+    "total_year": 1135
   },
   "heatmap": {
     "start": "2025-07-20",
@@ -780,7 +780,7 @@
         35,
         54,
         11,
-        0
+        4
       ]
     ]
   },
@@ -791,7 +791,7 @@
     },
     {
       "label": "contributions (last year)",
-      "value": 1131
+      "value": 1135
     },
     {
       "label": "months, first repo to production stack",
