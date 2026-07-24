@@ -117,6 +117,25 @@
   .mrow{display:flex;gap:10px;font-size:14.5px;padding:11px 14px;background:var(--card);border:1px solid var(--line);border-radius:11px}
   .mrow b{white-space:nowrap} .mrow b a{color:var(--fg)} .mrow span{color:var(--muted)}
 
+  /* flagships — disproportionate weight */
+  .flagship{background:var(--card);border:1px solid color-mix(in srgb,var(--accent) 42%,var(--line));
+    border-radius:16px;padding:26px 26px 22px;margin-top:16px}
+  .flagship+.flagship{margin-top:20px}
+  .fkicker{font-size:12px;text-transform:uppercase;letter-spacing:.08em;font-weight:700;color:var(--accent);margin:0 0 6px}
+  .flagship h3{margin:0 0 4px;font-size:clamp(21px,3.2vw,29px);letter-spacing:-.01em;line-height:1.15}
+  .flagship h3 a{color:var(--fg)} .flagship h3 a:hover{color:var(--accent)}
+  .flaghead{font-weight:750;letter-spacing:-.02em;line-height:1.02;color:var(--accent);margin:14px 0 10px}
+  .flaghead .big{font-size:clamp(40px,8vw,68px);display:inline-block;vertical-align:-2px}
+  .flaghead .u{font-size:clamp(15px,2.1vw,19px);font-weight:650;color:var(--fg);letter-spacing:-.01em}
+  .flagship .why{color:var(--fg);max-width:72ch;margin:2px 0 6px;font-size:15.5px}
+  .flagship .why b{font-weight:650}
+
+  /* other work — one line each, no cards */
+  .owlist{margin-top:10px;border-top:1px solid var(--line)}
+  .owrow{padding:11px 2px;border-bottom:1px solid var(--line);font-size:14.5px;line-height:1.5}
+  .owrow b{font-weight:650} .owrow b a{color:var(--fg)} .owrow b a:hover{color:var(--accent)}
+  .owrow span{color:var(--muted)}
+
   /* trajectory */
   .traj{display:grid;grid-template-columns:1.1fr 1fr;gap:28px;align-items:start}
   @media (max-width:760px){.traj{grid-template-columns:1fr;gap:8px}}
@@ -203,10 +222,15 @@
   </section>
 
   <section id="work">
-    <h2>What I build · 01</h2>
-    <div class="h2sub">AI-agent infrastructure — the <a href="https://jarmstrong158.github.io/Xylem/">Xylem</a> stack</div>
-    <p class="note">Run more than one AI coding agent on the same repo and two things break: they <em>forget</em> between sessions, and they <em>overwrite</em> each other. Xylem fixes both — with no server of its own, because <code>git push</code> already enforces "only save if nobody changed this first." A phone and a desktop become equal peers.</p>
-    <div class="card flag">
+    <h2>What I build</h2>
+    <div class="h2sub">Two flagships — and the work around them.</div>
+    <p class="note">Most of what follows exists to support two systems. Those two get the weight; everything else is one line at the bottom.</p>
+
+    <div class="flagship">
+      <p class="fkicker">Flagship · AI-agent infrastructure</p>
+      <h3><a href="https://jarmstrong158.github.io/Xylem/">Xylem</a> — a knowledge &amp; coordination layer for AI agents</h3>
+      <p class="why">Run more than one AI coding agent on the same repo and two things break: they <em>forget</em> between sessions, and they <em>overwrite</em> each other. Xylem fixes both — with no server of its own, because <code>git push</code> already enforces "only save if nobody changed this first." A phone and a desktop become equal peers.</p>
+      <div class="flaghead"><span class="big">1,000</span> <span class="u">simulated concurrent races: zero lost, zero double-granted</span></div>
       <div class="subgrid">
         <div class="sub">
           <b><a href="https://github.com/jarmstrong158/context-keeper">context-keeper</a></b>
@@ -226,64 +250,29 @@
       </div>
       <div class="callout"><b>Live on the official MCP registry</b> — <span id="regline">seven servers</span> under my namespace, installable from PyPI, with Cloudflare Worker remotes (<a href="https://github.com/jarmstrong158/context-keeper-remote">context-keeper-remote</a>, <a href="https://github.com/jarmstrong158/agentsync-remote">agentsync-remote</a>) so <b>claude.ai on your phone is a full peer</b>, not a viewer. → <a href="https://jarmstrong158.github.io/Xylem/">interactive explainer</a> · <a href="https://github.com/jarmstrong158/xylem">source</a></div>
     </div>
-  </section>
 
-  <section>
-    <h2 style="color:var(--rl)">What I build · 02</h2>
-    <div class="h2sub">Reinforcement learning for operations</div>
-    <p class="note">I run a warehouse, so I built RL agents that schedule a warehouse workforce — then generalized them. Numbers below are from held-out simulation, labeled as such.</p>
-    <div class="grid">
-      <div class="card">
-        <h3><a href="https://github.com/jarmstrong158/Clark">Clark</a></h3>
-        <div class="value">Schedule any facility, not just one</div>
-        <p>A foundation RL model — variable-shape transformer + LSTM (~18M params), 3-stage curriculum. Pretrain once, fine-tune a new facility in ~30 min, holding <b>~93% order completion from 5 to 50 workers</b> (sim). The generalization result.</p>
-        <div class="foot"><span class="pill">PyTorch</span><span class="pill">PPO</span><span class="pill">transformer</span><a class="lnk" href="https://github.com/jarmstrong158/Clark">Repo →</a></div>
-      </div>
-      <div class="card">
-        <h3><a href="https://github.com/jarmstrong158/Jack">Jack</a></h3>
-        <div class="value">The proof it works</div>
-        <p>PPO + LSTM with temporal memory: <b>98.2% order completion across ~9.4 simulated years</b> on a single facility. The validated predecessor that Clark generalizes.</p>
-        <div class="foot"><span class="pill">LSTM</span><span class="pill">temporal memory</span><a class="lnk" href="https://github.com/jarmstrong158/Jack">Repo →</a></div>
-      </div>
-      <div class="card">
-        <h3><a href="https://github.com/jarmstrong158/Balatron">Balatron</a></h3>
-        <div class="value">RL that plays to win</div>
-        <p>An autonomous Balatro agent: PPO policy + a forward-simulating build planner + tactical heuristics, measured on a held-out fixed-seed harness. <b>Confirmed white-stake wins</b> — an active project, still training today.</p>
-        <div class="foot"><span class="pill">hybrid agent</span><span class="pill">search + policy</span><a class="lnk" href="https://github.com/jarmstrong158/Balatron">Repo →</a></div>
-      </div>
+    <div class="flagship" style="--accent:var(--rl)">
+      <p class="fkicker">Flagship · Reinforcement learning</p>
+      <h3><a href="https://github.com/jarmstrong158/Clark">Clark</a> — a foundation RL model for workforce scheduling</h3>
+      <p class="why">A variable-shape transformer + LSTM (~18M params) trained with a 3-stage curriculum. Pretrain once, fine-tune a new facility in ~30 min. The hard part isn't scheduling one warehouse — it's one model that holds up as the workforce scales. That's the generalization result, from held-out simulation.</p>
+      <div class="flaghead"><span class="big">~93%</span> <span class="u">order completion from 5 to 50 workers (sim)</span></div>
+      <div class="foot"><span class="pill">PyTorch</span><span class="pill">PPO</span><span class="pill">transformer</span><a class="lnk" href="https://github.com/jarmstrong158/Clark">Repo →</a></div>
     </div>
-  </section>
 
-  <section>
-    <h2 style="color:var(--ops)">What I build · 03</h2>
-    <div class="h2sub">Automation that saves real hours</div>
-    <p class="note">The fastest way to prove software matters is to automate your own job. I built these to automate my own work at the warehouse.</p>
-    <div class="grid">
-      <div class="card">
-        <h3><a href="https://github.com/jarmstrong158/shipexec-metrics-tracker">ShipExec metrics tracker</a></h3>
-        <div class="value">~20 labor-hours a week, back</div>
-        <p>Automates a manual daily shipping-metrics reporting workflow across the team with Selenium, pandas, and Excel. A proof of concept, validated against real ShipExec data.</p>
-        <div class="foot"><span class="pill">Selenium</span><span class="pill">pandas</span><a class="lnk" href="https://github.com/jarmstrong158/shipexec-metrics-tracker">Repo →</a></div>
-      </div>
-      <div class="card">
-        <h3><a href="https://github.com/jarmstrong158/barcode-label-maker">Barcode label maker</a></h3>
-        <div class="value">Print-ready labels from a spreadsheet</div>
-        <p>Generates Avery barcode PDFs from an Excel pick-list, auto-shrinking SKUs, width-fit Code 39. Ships a synthetic catalog so real data stays private.</p>
-        <div class="foot"><span class="pill">Python</span><span class="pill">PDF</span><a class="lnk" href="https://github.com/jarmstrong158/barcode-label-maker">Repo →</a></div>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <h2>What I build · 04</h2>
-    <div class="h2sub">More agent tooling &amp; platforms</div>
-    <div class="more">
-      <div class="mrow"><b><a href="https://github.com/jarmstrong158/skillmatch-mcp">skillmatch-mcp</a></b><span>A job-fit analyzer that scores your resume + GitHub against a JD — yes, built during my own job search.</span></div>
-      <div class="mrow"><b><a href="https://github.com/jarmstrong158/skein">skein</a></b><span>Local-first observability for multi-agent (A2A) message flows — deterministic failure-cascade detection. 71/71 tests.</span></div>
-      <div class="mrow"><b><a href="https://github.com/jarmstrong158/waveform-MCP">waveform-MCP</a></b><span>150+ tools giving Claude full control of a DAW — compose, mix, master, render. My largest tool surface.</span></div>
-      <div class="mrow"><b><a href="https://github.com/jarmstrong158/llm-evals">llm-evals</a></b><span>Eval framework for LLM tools and agents — swappable executors + scorers, regression detection built in.</span></div>
-      <div class="mrow"><b><a href="https://github.com/jarmstrong158/Conductor">Conductor</a></b><span>Local automation platform with a web dashboard — Redis workers, scheduled tasks, 22 MCP tools. Shipped as a Windows product.</span></div>
-      <div class="mrow"><b><a href="https://github.com/jarmstrong158/rag-pipeline">rag-pipeline</a></b><span>Fully-local document Q&amp;A (llama.cpp + Llama 3.2 + nomic-embed). No cloud, no external vector DB.</span></div>
+    <h2 style="margin-top:48px">Other work</h2>
+    <div class="h2sub">Everything else, one line each.</div>
+    <div class="owlist">
+      <div class="owrow"><b><a href="https://github.com/jarmstrong158/Jack">Jack</a></b> — <span>PPO + LSTM with temporal memory: 98.2% order completion across ~9.4 simulated years on a single facility. The validated predecessor that Clark generalizes.</span></div>
+      <div class="owrow"><b><a href="https://github.com/jarmstrong158/Balatron">Balatron</a></b> — <span>An autonomous Balatro agent: PPO policy + a forward-simulating build planner + tactical heuristics, on a held-out fixed-seed harness. Confirmed white-stake wins — an active project, still training today.</span></div>
+      <div class="owrow"><b><a href="https://github.com/jarmstrong158/skein">skein</a></b> — <span>Local-first observability for multi-agent (A2A) message flows — deterministic failure-cascade detection. 71/71 tests.</span></div>
+      <div class="owrow"><b><a href="https://github.com/jarmstrong158/Conductor">Conductor</a></b> — <span>Local automation platform with a web dashboard — Redis workers, scheduled tasks, 22 MCP tools. Shipped as a Windows product.</span></div>
+      <div class="owrow"><b><a href="https://github.com/jarmstrong158/waveform-MCP">waveform-MCP</a></b> — <span>150+ tools giving Claude full control of a DAW — compose, mix, master, render. My largest tool surface.</span></div>
+      <div class="owrow"><b><a href="https://github.com/jarmstrong158/llm-evals">llm-evals</a></b> — <span>Eval framework for LLM tools and agents — swappable executors + scorers, regression detection built in.</span></div>
+      <div class="owrow"><b><a href="https://github.com/jarmstrong158/skillmatch-mcp">skillmatch-mcp</a></b> — <span>A job-fit analyzer that scores your resume + GitHub against a JD — yes, built during my own job search.</span></div>
+      <div class="owrow"><b><a href="https://github.com/jarmstrong158/rag-pipeline">rag-pipeline</a></b> — <span>Fully-local document Q&amp;A (llama.cpp + Llama 3.2 + nomic-embed). No cloud, no external vector DB.</span></div>
+      <div class="owrow"><b><a href="https://github.com/jarmstrong158/clark-mcp">clark-mcp</a></b> — <span>A fully-local natural-language interface to the Clark agent — MCP server + offline hermes3 client. No cloud, no API cost.</span></div>
+      <div class="owrow"><b><a href="https://github.com/jarmstrong158/barcode-label-maker">barcode-label-maker</a></b> — <span>Generates Avery barcode PDFs from an Excel pick-list, auto-shrinking SKUs, width-fit Code 39. Ships a synthetic catalog so real data stays private.</span></div>
+      <div class="owrow"><b><a href="https://github.com/jarmstrong158/shipexec-metrics-tracker">shipexec-metrics-tracker</a></b> — <span>Automates a manual daily shipping-metrics reporting workflow across the team with Selenium, pandas, and Excel — measured time savings of ~20 labor-hours a week. A proof of concept, validated against real ShipExec data.</span></div>
     </div>
     <p class="cap" style="margin-top:14px">…and more — full list on <a href="https://github.com/jarmstrong158?tab=repositories">GitHub</a>.</p>
   </section>
