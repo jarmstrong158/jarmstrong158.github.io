@@ -129,6 +129,9 @@
   .flaghead .u{font-size:clamp(15px,2.1vw,19px);font-weight:650;color:var(--fg);letter-spacing:-.01em}
   .flagship .why{color:var(--fg);max-width:72ch;margin:2px 0 6px;font-size:15.5px}
   .flagship .why b{font-weight:650}
+  .flagsub{color:var(--muted);max-width:72ch;margin:12px 0 4px;font-size:13.5px;line-height:1.5;
+    padding-left:12px;border-left:2px solid color-mix(in srgb,var(--accent) 35%,var(--line))}
+  .flagsub b a{color:var(--fg);font-weight:650}
 
   /* other work — one line each, no cards */
   .owlist{margin-top:10px;border-top:1px solid var(--line)}
@@ -224,7 +227,6 @@
   <section id="work">
     <h2>What I build</h2>
     <div class="h2sub">Two flagships — and the work around them.</div>
-    <p class="note">Most of what follows exists to support two systems. Those two get the weight; everything else is one line at the bottom.</p>
 
     <div class="flagship">
       <p class="fkicker">Flagship · AI-agent infrastructure</p>
@@ -240,7 +242,7 @@
         <div class="sub">
           <b><a href="https://github.com/jarmstrong158/agentsync">agentsync</a></b>
           <div class="v">Two agents, one repo, zero collisions</div>
-          <p>Server-less coordination — claims live on a git branch and <code>git push</code> is the lock. 1,000 simulated concurrent races: zero lost, zero double-granted.</p>
+          <p>Server-less coordination — claims live on a git branch and <code>git push</code> is the lock.</p>
         </div>
         <div class="sub">
           <b><a href="https://github.com/jarmstrong158/cambium">cambium</a></b>
@@ -256,13 +258,13 @@
       <h3><a href="https://github.com/jarmstrong158/Clark">Clark</a> — a foundation RL model for workforce scheduling</h3>
       <p class="why">A variable-shape transformer + LSTM (~18M params) trained with a 3-stage curriculum. Pretrain once, fine-tune a new facility in ~30 min. The hard part isn't scheduling one warehouse — it's one model that holds up as the workforce scales. That's the generalization result, from held-out simulation.</p>
       <div class="flaghead"><span class="big">~93%</span> <span class="u">order completion from 5 to 50 workers (sim)</span></div>
+      <p class="flagsub"><b><a href="https://github.com/jarmstrong158/Jack">Jack</a></b> — PPO + LSTM with temporal memory: 98.2% order completion across ~9.4 simulated years on a single facility. The validated predecessor that Clark generalizes.</p>
       <div class="foot"><span class="pill">PyTorch</span><span class="pill">PPO</span><span class="pill">transformer</span><a class="lnk" href="https://github.com/jarmstrong158/Clark">Repo →</a></div>
     </div>
 
     <h2 style="margin-top:48px">Other work</h2>
     <div class="h2sub">Everything else, one line each.</div>
     <div class="owlist">
-      <div class="owrow"><b><a href="https://github.com/jarmstrong158/Jack">Jack</a></b> — <span>PPO + LSTM with temporal memory: 98.2% order completion across ~9.4 simulated years on a single facility. The validated predecessor that Clark generalizes.</span></div>
       <div class="owrow"><b><a href="https://github.com/jarmstrong158/Balatron">Balatron</a></b> — <span>An autonomous Balatro agent: PPO policy + a forward-simulating build planner + tactical heuristics, on a held-out fixed-seed harness. Confirmed white-stake wins — an active project, still training today.</span></div>
       <div class="owrow"><b><a href="https://github.com/jarmstrong158/skein">skein</a></b> — <span>Local-first observability for multi-agent (A2A) message flows — deterministic failure-cascade detection. 71/71 tests.</span></div>
       <div class="owrow"><b><a href="https://github.com/jarmstrong158/Conductor">Conductor</a></b> — <span>Local automation platform with a web dashboard — Redis workers, scheduled tasks, 22 MCP tools. Shipped as a Windows product.</span></div>
