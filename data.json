@@ -26,7 +26,7 @@
       "metric": "the starting line",
       "featured": true,
       "date": "2026-02-25",
-      "updated": "2026-07-12",
+      "updated": "2026-07-25",
       "language": "Python",
       "stars": 0,
       "url": "https://github.com/jarmstrong158/git-onboard"
@@ -38,7 +38,7 @@
       "metric": "~20 labor-hrs/week saved \u00b7 proof of concept",
       "featured": false,
       "date": "2026-02-26",
-      "updated": "2026-07-14",
+      "updated": "2026-07-25",
       "language": "Python",
       "stars": 0,
       "url": "https://github.com/jarmstrong158/shipexec-metrics-tracker"
@@ -86,7 +86,7 @@
       "metric": "98.2% order completion (sim)",
       "featured": true,
       "date": "2026-03-27",
-      "updated": "2026-07-12",
+      "updated": "2026-07-25",
       "language": "Python",
       "stars": 0,
       "url": "https://github.com/jarmstrong158/Jack"
@@ -182,7 +182,7 @@
       "metric": "150+ tools \u2014 largest surface I've built",
       "featured": false,
       "date": "2026-05-01",
-      "updated": "2026-05-10",
+      "updated": "2026-07-25",
       "language": "Python",
       "stars": 2,
       "url": "https://github.com/jarmstrong158/waveform-MCP"
@@ -194,7 +194,7 @@
       "metric": "",
       "featured": false,
       "date": "2026-06-01",
-      "updated": "2026-07-20",
+      "updated": "2026-07-25",
       "language": "TypeScript",
       "stars": 0,
       "url": "https://github.com/jarmstrong158/vanguard-web"
@@ -218,7 +218,7 @@
       "metric": "1,000 races \u2014 0 lost, 0 double-granted",
       "featured": true,
       "date": "2026-06-14",
-      "updated": "2026-07-24",
+      "updated": "2026-07-25",
       "language": "Python",
       "stars": 0,
       "url": "https://github.com/jarmstrong158/agentsync"
@@ -254,7 +254,7 @@
       "metric": "phone as a full peer",
       "featured": false,
       "date": "2026-07-08",
-      "updated": "2026-07-24",
+      "updated": "2026-07-25",
       "language": "TypeScript",
       "stars": 0,
       "url": "https://github.com/jarmstrong158/agentsync-remote"
@@ -266,7 +266,7 @@
       "metric": "5 servers live on the official MCP registry",
       "featured": true,
       "date": "2026-07-08",
-      "updated": "2026-07-24",
+      "updated": "2026-07-25",
       "language": "Python",
       "stars": 0,
       "url": "https://github.com/jarmstrong158/Xylem"
@@ -297,10 +297,10 @@
       },
       {
         "m": "2026-07",
-        "n": 407
+        "n": 425
       }
     ],
-    "total_year": 1143
+    "total_year": 1161
   },
   "heatmap": {
     "start": "2025-07-20",
@@ -781,7 +781,7 @@
         54,
         11,
         12,
-        0
+        18
       ]
     ]
   },
@@ -792,7 +792,7 @@
     },
     {
       "label": "contributions (last year)",
-      "value": 1143
+      "value": 1161
     },
     {
       "label": "months, first repo to production stack",
