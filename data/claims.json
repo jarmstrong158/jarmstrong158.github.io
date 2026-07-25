@@ -1,0 +1,88 @@
+{
+  "_comment": [
+    "Canonical numeric claims for the site. Single source of truth: index.html renders",
+    "the receipts table from this file, so a number is corrected in exactly one place.",
+    "",
+    "`superseded` lists values this claim used to assert. scripts/check_claims.py fails",
+    "the build if any of them reappears anywhere in the site, so a corrected number",
+    "cannot quietly come back — which is exactly what happened to three of these: they",
+    "survived a full restructure of index.html because the prose and the curated meta",
+    "were edited independently."
+  ],
+  "generated_note": "Verified 2026-07-25 by running the suites and reading the code.",
+  "claims": [
+    {
+      "claim": "MCP servers on the official registry",
+      "detail": "published and installable from PyPI",
+      "value": "7 servers",
+      "source": "Xylem",
+      "url": "https://github.com/jarmstrong158/Xylem"
+    },
+    {
+      "claim": "agentsync under contention",
+      "detail": "1,000 simulated concurrent races",
+      "value": "0 lost / 0 double-granted",
+      "source": "agentsync",
+      "url": "https://github.com/jarmstrong158/agentsync"
+    },
+    {
+      "claim": "context-keeper retrieval",
+      "detail": "versus dumping the whole store",
+      "value": "~92% less context",
+      "source": "context-keeper",
+      "url": "https://github.com/jarmstrong158/context-keeper"
+    },
+    {
+      "claim": "Clark generalization",
+      "detail": "held-out simulation, 5 to 50 workers",
+      "value": "~93% completion",
+      "source": "Clark",
+      "url": "https://github.com/jarmstrong158/Clark"
+    },
+    {
+      "claim": "Clark fine-tune cost",
+      "detail": "~50 episodes on a consumer GPU",
+      "value": "~3.3 h",
+      "source": "Clark",
+      "url": "https://github.com/jarmstrong158/Clark",
+      "superseded": ["~30 min"]
+    },
+    {
+      "claim": "Jack single-facility agent",
+      "detail": "across ~9.4 simulated years",
+      "value": "98.2% completion",
+      "source": "Jack",
+      "url": "https://github.com/jarmstrong158/Jack"
+    },
+    {
+      "claim": "skein test suite",
+      "detail": "ruff + mypy clean in CI",
+      "value": "130/130 passing",
+      "source": "skein",
+      "url": "https://github.com/jarmstrong158/skein",
+      "superseded": ["71/71"]
+    },
+    {
+      "claim": "Conductor tool surface",
+      "detail": "exposed to Claude over MCP",
+      "value": "24 MCP tools",
+      "source": "Conductor",
+      "url": "https://github.com/jarmstrong158/Conductor",
+      "superseded": ["22 MCP tools"]
+    },
+    {
+      "claim": "waveform-MCP tool surface",
+      "detail": "counted from the server's own tool list",
+      "value": "161 tools",
+      "source": "waveform-MCP",
+      "url": "https://github.com/jarmstrong158/waveform-MCP"
+    },
+    {
+      "claim": "Measured automation savings",
+      "detail": "warehouse reporting, proof of concept",
+      "value": "~20 h / week",
+      "source": "shipexec-metrics-tracker",
+      "url": "https://github.com/jarmstrong158/shipexec-metrics-tracker"
+    }
+  ]
+}

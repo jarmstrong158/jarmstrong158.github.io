@@ -133,6 +133,21 @@
     padding-left:12px;border-left:2px solid color-mix(in srgb,var(--accent) 35%,var(--line))}
   .flagsub b a{color:var(--fg);font-weight:650}
 
+  /* receipts — every number next to the thing that produces it */
+  .rcpt{margin-top:14px;border-top:1px solid var(--line)}
+  .rrow{display:grid;grid-template-columns:1fr auto auto;gap:16px;align-items:baseline;
+    padding:12px 2px;border-bottom:1px solid var(--line)}
+  .rrow .c{font-size:14.5px;font-weight:650}
+  .rrow .c small{display:block;font-weight:400;color:var(--muted);font-size:13px;margin-top:2px}
+  .rrow .v{font-weight:700;color:var(--accent);font-size:14.5px;white-space:nowrap}
+  .rrow .s{font-size:12.5px;color:var(--muted);white-space:nowrap}
+  .rrow .s:hover{color:var(--accent)}
+  @media (max-width:640px){
+    /* three columns cannot hold at 375px — the value and source push it wide */
+    .rrow{grid-template-columns:1fr;gap:4px}
+    .rrow .v{margin-top:4px}
+  }
+
   /* other work — one line each, no cards */
   .owlist{margin-top:10px;border-top:1px solid var(--line)}
   .owrow{padding:11px 2px;border-bottom:1px solid var(--line);font-size:14.5px;line-height:1.5}
@@ -319,6 +334,17 @@
     </div>
   </section>
 
+  <section id="receipts">
+    <h2>Receipts</h2>
+    <div class="h2sub">Every number on this page, next to the thing that produces it.</div>
+    <p class="note">Rendered from <a href="data/claims.json">data/claims.json</a>, which is the single
+      place any of these is written down. Check whichever one you doubt.</p>
+    <div class="rcpt" id="rcpt"></div>
+    <p class="note" style="margin-top:16px">Not on this list: adoption. The registry listings are
+      published, not popular — my user count is in single digits, there's no production traffic, and
+      no code review from anyone but me.</p>
+  </section>
+
   <section>
     <div class="contact">
       <h3>Looking for applied-AI, forward-deployed, or ML engineering work.</h3>
@@ -418,6 +444,26 @@
       legs[i].style.background=l===0?"var(--grid)":"var(--accent)";legs[i].style.opacity=l===0?1:op[l];}
   }
   renderStats(null); // paint immediately; refine with live data below
+  // Receipts render from claims.json, which is the only place these numbers are
+  // written. Same progressive-enhancement pattern the stats row already uses:
+  // if the fetch fails the section is simply absent rather than half-rendered.
+  fetch("data/claims.json",{cache:"no-store"})
+    .then(function(r){if(!r.ok)throw 0;return r.json();})
+    .then(function(d){
+      var host=document.getElementById("rcpt");
+      if(!host||!d.claims)return;
+      host.innerHTML=d.claims.map(function(c){
+        return '<div class="rrow"><div class="c">'+c.claim+
+          (c.detail?'<small>'+c.detail+'</small>':'')+'</div>'+
+          '<div class="v">'+c.value+'</div>'+
+          '<a class="s" href="'+c.url+'">'+c.source+' ↗</a></div>';
+      }).join("");
+    })
+    .catch(function(){
+      var s=document.getElementById("receipts");
+      if(s)s.style.display="none";
+    });
+
   fetch("data.json",{cache:"no-store"})
     .then(function(r){if(!r.ok)throw 0;return r.json();})
     .then(function(data){

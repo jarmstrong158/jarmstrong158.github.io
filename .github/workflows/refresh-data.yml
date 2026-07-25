@@ -8,6 +8,9 @@ on:
     paths:
       - "data/projects.meta.json"  # re-run when curation changes
       - "scripts/build_data.py"
+      - "data/claims.json"         # ...and when a claim is corrected
+      - "index.html"               # ...or the prose asserting one changes
+  pull_request:
   workflow_dispatch:
 
 permissions:
@@ -21,11 +24,25 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - name: Check no corrected claim has come back
+        # Runs before the build and on pull requests, so a stale number is
+        # caught on the change that reintroduces it rather than the next day.
+        run: python scripts/check_claims.py
+
       - name: Build data.json
+        if: github.event_name != 'pull_request'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python scripts/build_data.py
+
+      - name: Re-check the generated data.json
+        # build_data.py pulls live GitHub descriptions, so it can import a stale
+        # value that was never in the curated files at all.
+        if: github.event_name != 'pull_request'
+        run: python scripts/check_claims.py
+
       - name: Commit if changed
+        if: github.event_name != 'pull_request'
         run: |
           if ! git diff --quiet -- data.json; then
             git config user.name "github-actions[bot]"
