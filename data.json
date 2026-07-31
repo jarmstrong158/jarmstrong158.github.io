@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-30",
+  "generated": "2026-07-31",
   "threads": {
     "mcp": {
       "label": "MCP & agent infrastructure",
@@ -254,7 +254,7 @@
       "metric": "phone as a full peer",
       "featured": false,
       "date": "2026-07-08",
-      "updated": "2026-07-29",
+      "updated": "2026-07-31",
       "language": "TypeScript",
       "stars": 0,
       "url": "https://github.com/jarmstrong158/agentsync-remote"
@@ -266,7 +266,7 @@
       "metric": "5 servers live on the official MCP registry",
       "featured": true,
       "date": "2026-07-08",
-      "updated": "2026-07-29",
+      "updated": "2026-07-30",
       "language": "Python",
       "stars": 0,
       "url": "https://github.com/jarmstrong158/Xylem"
@@ -779,6 +779,7 @@
         4,
         3,
         7,
+        0,
         0
       ]
     ]
