@@ -32,15 +32,17 @@
     {
       "claim": "context-keeper retrieval",
       "detail": "versus dumping the whole store",
-      "value": "~92% less context; hit@5 76% (embedding) / 56% (lexical) on 59 problem-authored cases",
+      "value": "~92% less context; hit@5 70% (embedding) / 50% (lexical) on 59 problem-authored cases, frozen corpus",
       "source": "context-keeper",
-      "url": "https://github.com/jarmstrong158/context-keeper",
+      "url": "https://jarmstrong158.github.io/context-keeper/",
       "superseded": [
+        "76% (embedding)",
         "Hit@5 13/15",
+        "hit@5 76%",
         "hit@5 80%",
         "hit@5 93%"
       ],
-      "note": "Measured 2026-08-05 by evals/run_retrieval_eval.py against a frozen 7-store corpus. LOWER than the retired figures on purpose: those came from a synthetic corpus and a partly paraphrase-derived set, where the query shared surface tokens with its target and inflated recall. Questions are now written from the problem an entry solves."
+      "note": "Measured 2026-08-05 by evals/run_retrieval_eval.py against the FROZEN 7-store corpus committed at evals/fixtures/corpus. An earlier published figure of 76% was measured against live stores before the corpus was frozen and no longer reproduces -- that is why the corpus is frozen. Lower than the retired synthetic figures on purpose: those queries were reworded from the entries they targeted."
     },
     {
       "claim": "Clark generalization",
