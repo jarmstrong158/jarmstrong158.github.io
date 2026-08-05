@@ -62,7 +62,7 @@
       "metric": "confirmed white-stake wins",
       "featured": true,
       "date": "2026-03-21",
-      "updated": "2026-08-04",
+      "updated": "2026-08-05",
       "language": "Python",
       "stars": 3,
       "url": "https://github.com/jarmstrong158/Balatron"
@@ -131,10 +131,10 @@
       "name": "context-keeper",
       "thread": "mcp",
       "blurb": "Durable, rationale-first project memory: decisions, constraints, and pipelines across sessions, in human-editable JSON.",
-      "metric": "~92% context reduction \u00b7 Hit@5 13/15",
+      "metric": "~92% context reduction \u00b7 hit@5 76% on 59 real cases",
       "featured": true,
       "date": "2026-04-10",
-      "updated": "2026-08-02",
+      "updated": "2026-08-05",
       "language": "Python",
       "stars": 1,
       "url": "https://github.com/jarmstrong158/context-keeper"
@@ -218,7 +218,7 @@
       "metric": "1,000 races \u2014 0 lost, 0 double-granted",
       "featured": true,
       "date": "2026-06-14",
-      "updated": "2026-08-02",
+      "updated": "2026-08-05",
       "language": "Python",
       "stars": 0,
       "url": "https://github.com/jarmstrong158/agentsync"
@@ -242,7 +242,7 @@
       "metric": "phone as a full peer",
       "featured": false,
       "date": "2026-07-08",
-      "updated": "2026-08-02",
+      "updated": "2026-08-05",
       "language": "TypeScript",
       "stars": 0,
       "url": "https://github.com/jarmstrong158/context-keeper-remote"
@@ -254,7 +254,7 @@
       "metric": "phone as a full peer",
       "featured": false,
       "date": "2026-07-08",
-      "updated": "2026-08-04",
+      "updated": "2026-08-05",
       "language": "TypeScript",
       "stars": 0,
       "url": "https://github.com/jarmstrong158/agentsync-remote"
@@ -266,7 +266,7 @@
       "metric": "5 servers live on the official MCP registry",
       "featured": true,
       "date": "2026-07-08",
-      "updated": "2026-08-04",
+      "updated": "2026-08-05",
       "language": "Python",
       "stars": 0,
       "url": "https://github.com/jarmstrong158/Xylem"
@@ -301,10 +301,10 @@
       },
       {
         "m": "2026-08",
-        "n": 62
+        "n": 68
       }
     ],
-    "total_year": 1324
+    "total_year": 1330
   },
   "heatmap": {
     "start": "2025-08-03",
@@ -782,7 +782,7 @@
         40,
         1,
         2,
-        0
+        6
       ]
     ]
   },
@@ -793,7 +793,7 @@
     },
     {
       "label": "contributions (last year)",
-      "value": 1324
+      "value": 1330
     },
     {
       "label": "months, first repo to production stack",
