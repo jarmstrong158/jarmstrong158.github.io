@@ -16,7 +16,7 @@
     "clark-mcp":                { "thread": "rl",    "blurb": "Fully-local natural-language interface to the Clark agent — MCP server + offline hermes3 client.", "metric": "no cloud, no API cost" },
     "ai-profile-builder":       { "thread": "tools", "blurb": "Full-stack team AI-profiling platform: 14 behavioral spectrums, 9 archetypes, React 19 + Supabase.", "metric": "119-test suite" },
     "skillmatch-mcp":           { "thread": "mcp",   "blurb": "Job-fit analysis MCP: compares your resume + GitHub portfolio against a job description.", "metric": "for proving skills through work" },
-    "context-keeper":           { "thread": "mcp",   "featured": true,  "blurb": "Durable, rationale-first project memory: decisions, constraints, and pipelines across sessions, in human-editable JSON.", "metric": "~92% context reduction · Hit@5 13/15" },
+    "context-keeper":           { "thread": "mcp",   "featured": true,  "blurb": "Durable, rationale-first project memory: decisions, constraints, and pipelines across sessions, in human-editable JSON.", "metric": "~92% context reduction · hit@5 76% on 59 real cases" },
     "llm-evals":                { "thread": "mcp",   "blurb": "Eval framework for LLM tools and agents — swappable executors and scorers, regression detection built in.", "metric": "MCP / CLI / HTTP / Python executors" },
     "rag-pipeline":             { "thread": "mcp",   "blurb": "Fully-local document Q&A (llama.cpp + Llama 3.2 + nomic-embed), FastAPI front door.", "metric": "no cloud, no external vector DB" },
     "skein":                    { "thread": "mcp",   "blurb": "Local-first observability for A2A multi-agent message flows — deterministic failure-cascade detection.", "metric": "130/130 tests, ruff + mypy clean" },

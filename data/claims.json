@@ -14,9 +14,13 @@
     {
       "claim": "MCP servers on the official registry",
       "detail": "published and installable from PyPI",
-      "value": "7 servers",
+      "value": "8 servers",
       "source": "Xylem",
-      "url": "https://github.com/jarmstrong158/Xylem"
+      "url": "https://github.com/jarmstrong158/Xylem",
+      "superseded": [
+        "7 servers",
+        "seven servers"
+      ]
     },
     {
       "claim": "agentsync under contention",
@@ -28,9 +32,15 @@
     {
       "claim": "context-keeper retrieval",
       "detail": "versus dumping the whole store",
-      "value": "~92% less context",
+      "value": "~92% less context; hit@5 76% (embedding) / 56% (lexical) on 59 problem-authored cases",
       "source": "context-keeper",
-      "url": "https://github.com/jarmstrong158/context-keeper"
+      "url": "https://github.com/jarmstrong158/context-keeper",
+      "superseded": [
+        "Hit@5 13/15",
+        "hit@5 80%",
+        "hit@5 93%"
+      ],
+      "note": "Measured 2026-08-05 by evals/run_retrieval_eval.py against a frozen 7-store corpus. LOWER than the retired figures on purpose: those came from a synthetic corpus and a partly paraphrase-derived set, where the query shared surface tokens with its target and inflated recall. Questions are now written from the problem an entry solves."
     },
     {
       "claim": "Clark generalization",
@@ -45,7 +55,9 @@
       "value": "~3.3 h",
       "source": "Clark",
       "url": "https://github.com/jarmstrong158/Clark",
-      "superseded": ["~30 min"]
+      "superseded": [
+        "~30 min"
+      ]
     },
     {
       "claim": "Jack single-facility agent",
@@ -60,7 +72,9 @@
       "value": "130/130 passing",
       "source": "skein",
       "url": "https://github.com/jarmstrong158/skein",
-      "superseded": ["71/71"]
+      "superseded": [
+        "71/71"
+      ]
     },
     {
       "claim": "Conductor tool surface",
@@ -68,7 +82,9 @@
       "value": "24 MCP tools",
       "source": "Conductor",
       "url": "https://github.com/jarmstrong158/Conductor",
-      "superseded": ["22 MCP tools"]
+      "superseded": [
+        "22 MCP tools"
+      ]
     },
     {
       "claim": "waveform-MCP tool surface",
