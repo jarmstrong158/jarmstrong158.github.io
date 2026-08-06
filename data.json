@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-05",
+  "generated": "2026-08-06",
   "threads": {
     "mcp": {
       "label": "MCP & agent infrastructure",
@@ -62,7 +62,7 @@
       "metric": "confirmed white-stake wins",
       "featured": true,
       "date": "2026-03-21",
-      "updated": "2026-08-05",
+      "updated": "2026-08-06",
       "language": "Python",
       "stars": 3,
       "url": "https://github.com/jarmstrong158/Balatron"
@@ -98,7 +98,7 @@
       "metric": "~93% completion across 5\u201350-worker facilities (sim)",
       "featured": true,
       "date": "2026-03-28",
-      "updated": "2026-07-24",
+      "updated": "2026-08-06",
       "language": "Python",
       "stars": 2,
       "url": "https://github.com/jarmstrong158/Clark"
@@ -134,7 +134,7 @@
       "metric": "~92% context reduction \u00b7 hit@5 70% on 59 real cases",
       "featured": true,
       "date": "2026-04-10",
-      "updated": "2026-08-05",
+      "updated": "2026-08-06",
       "language": "Python",
       "stars": 1,
       "url": "https://github.com/jarmstrong158/context-keeper"
@@ -218,7 +218,7 @@
       "metric": "1,000 races \u2014 0 lost, 0 double-granted",
       "featured": true,
       "date": "2026-06-14",
-      "updated": "2026-08-05",
+      "updated": "2026-08-06",
       "language": "Python",
       "stars": 0,
       "url": "https://github.com/jarmstrong158/agentsync"
@@ -230,7 +230,7 @@
       "metric": "bridges agentsync + context-keeper",
       "featured": true,
       "date": "2026-07-03",
-      "updated": "2026-08-02",
+      "updated": "2026-08-06",
       "language": "Python",
       "stars": 0,
       "url": "https://github.com/jarmstrong158/cambium"
@@ -242,7 +242,7 @@
       "metric": "phone as a full peer",
       "featured": false,
       "date": "2026-07-08",
-      "updated": "2026-08-05",
+      "updated": "2026-08-06",
       "language": "TypeScript",
       "stars": 0,
       "url": "https://github.com/jarmstrong158/context-keeper-remote"
@@ -301,10 +301,10 @@
       },
       {
         "m": "2026-08",
-        "n": 70
+        "n": 91
       }
     ],
-    "total_year": 1332
+    "total_year": 1353
   },
   "heatmap": {
     "start": "2025-08-03",
@@ -782,7 +782,8 @@
         40,
         1,
         2,
-        8
+        20,
+        9
       ]
     ]
   },
@@ -793,7 +794,7 @@
     },
     {
       "label": "contributions (last year)",
-      "value": 1332
+      "value": 1353
     },
     {
       "label": "months, first repo to production stack",
