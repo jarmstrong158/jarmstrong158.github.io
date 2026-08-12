@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-11",
+  "generated": "2026-08-12",
   "threads": {
     "mcp": {
       "label": "MCP & agent infrastructure",
@@ -254,7 +254,7 @@
       "metric": "phone as a full peer",
       "featured": false,
       "date": "2026-07-08",
-      "updated": "2026-08-05",
+      "updated": "2026-08-11",
       "language": "TypeScript",
       "stars": 1,
       "url": "https://github.com/jarmstrong158/agentsync-remote"
@@ -301,10 +301,10 @@
       },
       {
         "m": "2026-08",
-        "n": 137
+        "n": 141
       }
     ],
-    "total_year": 1399
+    "total_year": 1403
   },
   "heatmap": {
     "start": "2025-08-10",
@@ -781,6 +781,7 @@
       [
         0,
         0,
+        4,
         0
       ]
     ]
@@ -792,7 +793,7 @@
     },
     {
       "label": "contributions (last year)",
-      "value": 1399
+      "value": 1403
     },
     {
       "label": "months, first repo to production stack",
