@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-14",
+  "generated": "2026-08-15",
   "threads": {
     "mcp": {
       "label": "MCP & agent infrastructure",
@@ -64,7 +64,7 @@
       "date": "2026-03-21",
       "updated": "2026-08-13",
       "language": "Python",
-      "stars": 3,
+      "stars": 4,
       "url": "https://github.com/jarmstrong158/Balatron"
     },
     {
@@ -266,7 +266,7 @@
       "metric": "5 servers live on the official MCP registry",
       "featured": true,
       "date": "2026-07-08",
-      "updated": "2026-08-13",
+      "updated": "2026-08-14",
       "language": "Python",
       "stars": 0,
       "url": "https://github.com/jarmstrong158/Xylem"
@@ -783,6 +783,7 @@
         0,
         4,
         2,
+        0,
         0,
         0
       ]
