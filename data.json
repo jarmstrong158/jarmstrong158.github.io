@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-15",
+  "generated": "2026-08-16",
   "threads": {
     "mcp": {
       "label": "MCP & agent infrastructure",
@@ -184,7 +184,7 @@
       "date": "2026-05-01",
       "updated": "2026-08-02",
       "language": "Python",
-      "stars": 2,
+      "stars": 3,
       "url": "https://github.com/jarmstrong158/waveform-MCP"
     },
     {
@@ -266,7 +266,7 @@
       "metric": "5 servers live on the official MCP registry",
       "featured": true,
       "date": "2026-07-08",
-      "updated": "2026-08-14",
+      "updated": "2026-08-15",
       "language": "Python",
       "stars": 0,
       "url": "https://github.com/jarmstrong158/Xylem"
@@ -307,18 +307,9 @@
     "total_year": 1405
   },
   "heatmap": {
-    "start": "2025-08-10",
+    "start": "2025-08-17",
     "max": 88,
     "weeks": [
-      [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
       [
         0,
         0,
@@ -785,6 +776,9 @@
         2,
         0,
         0,
+        0
+      ],
+      [
         0
       ]
     ]
