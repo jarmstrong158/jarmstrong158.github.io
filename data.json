@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-17",
+  "generated": "2026-08-18",
   "threads": {
     "mcp": {
       "label": "MCP & agent infrastructure",
@@ -134,7 +134,7 @@
       "metric": "~92% context reduction \u00b7 hit@5 70% on 59 real cases",
       "featured": true,
       "date": "2026-04-10",
-      "updated": "2026-08-16",
+      "updated": "2026-08-17",
       "language": "Python",
       "stars": 1,
       "url": "https://github.com/jarmstrong158/context-keeper"
@@ -254,7 +254,7 @@
       "metric": "phone as a full peer",
       "featured": false,
       "date": "2026-07-08",
-      "updated": "2026-08-17",
+      "updated": "2026-08-18",
       "language": "TypeScript",
       "stars": 1,
       "url": "https://github.com/jarmstrong158/agentsync-remote"
@@ -266,7 +266,7 @@
       "metric": "5 servers live on the official MCP registry",
       "featured": true,
       "date": "2026-07-08",
-      "updated": "2026-08-16",
+      "updated": "2026-08-17",
       "language": "Python",
       "stars": 0,
       "url": "https://github.com/jarmstrong158/Xylem"
@@ -301,10 +301,10 @@
       },
       {
         "m": "2026-08",
-        "n": 165
+        "n": 175
       }
     ],
-    "total_year": 1427
+    "total_year": 1437
   },
   "heatmap": {
     "start": "2025-08-17",
@@ -780,6 +780,7 @@
       ],
       [
         22,
+        10,
         0
       ]
     ]
@@ -791,7 +792,7 @@
     },
     {
       "label": "contributions (last year)",
-      "value": 1427
+      "value": 1437
     },
     {
       "label": "months, first repo to production stack",
