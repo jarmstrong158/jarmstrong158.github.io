@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-31",
+  "generated": "2026-09-01",
   "threads": {
     "mcp": {
       "label": "MCP & agent infrastructure",
@@ -266,7 +266,7 @@
       "metric": "5 servers live on the official MCP registry",
       "featured": true,
       "date": "2026-07-08",
-      "updated": "2026-08-30",
+      "updated": "2026-08-31",
       "language": "Python",
       "stars": 0,
       "url": "https://github.com/jarmstrong158/Xylem"
@@ -302,6 +302,10 @@
       {
         "m": "2026-08",
         "n": 182
+      },
+      {
+        "m": "2026-09",
+        "n": 0
       }
     ],
     "total_year": 1444
@@ -780,6 +784,7 @@
       ],
       [
         0,
+        0,
         0
       ]
     ]
@@ -795,7 +800,7 @@
     },
     {
       "label": "months, first repo to production stack",
-      "value": 7
+      "value": 8
     },
     {
       "label": "MCP servers on the official registry",
