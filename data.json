@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-05",
+  "generated": "2026-09-06",
   "threads": {
     "mcp": {
       "label": "MCP & agent infrastructure",
@@ -311,18 +311,9 @@
     "total_year": 1444
   },
   "heatmap": {
-    "start": "2025-08-31",
+    "start": "2025-09-07",
     "max": 88,
     "weeks": [
-      [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
       [
         0,
         0,
@@ -789,6 +780,9 @@
         0,
         0,
         0,
+        0
+      ],
+      [
         0
       ]
     ]
