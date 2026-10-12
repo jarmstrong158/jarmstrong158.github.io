@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-11",
+  "generated": "2026-10-12",
   "threads": {
     "mcp": {
       "label": "MCP & agent infrastructure",
@@ -787,6 +787,7 @@
         0
       ],
       [
+        0,
         0
       ]
     ]
@@ -803,10 +804,6 @@
     {
       "label": "months, first repo to production stack",
       "value": 9
-    },
-    {
-      "label": "MCP servers on the official registry",
-      "value": 8
     }
   ]
 }
