@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-03",
+  "generated": "2026-11-04",
   "threads": {
     "mcp": {
       "label": "MCP & agent infrastructure",
@@ -184,7 +184,7 @@
       "date": "2026-05-01",
       "updated": "2026-08-02",
       "language": "Python",
-      "stars": 6,
+      "stars": 7,
       "url": "https://github.com/jarmstrong158/waveform-MCP"
     },
     {
@@ -791,6 +791,7 @@
         0
       ],
       [
+        0,
         0,
         0,
         0
